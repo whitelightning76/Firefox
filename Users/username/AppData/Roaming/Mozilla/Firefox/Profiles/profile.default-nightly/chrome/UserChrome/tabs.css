@@ -29,10 +29,6 @@
 										opacity: 1.0 !important;
 										color: var(--theme-text-notselected) !important;
 										filter: brightness(125%) !important; }
-
-
-
-
 			
 /* unloaded tabs */
 .tabbrowser-tab[pending="true"] .tab-text { color: #ff0000 !important;

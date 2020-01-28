@@ -2,43 +2,6 @@
 /* -                                                     Titlebar                                                               -*/
 /* ------------------------------------------------------------------------------------------------------------------------------*/
 																												   
-#tabs-newtab-button.toolbarbutton-1 { -moz-appearance: none !important;
-									  background-image: transparent !important; /* alltabs button default */
-									  fill: var(--theme-titlebar-default-icon) !important;
-									  border: 2px solid transparent !important;
-									  box-shadow: 0 0 10px transparent !important; }
-
-#tabs-newtab-button:hover { fill: var(--theme-titlebar-new-tab-icon) !important; /* new tab button hover */ }
-
-
-/* min max close buttons */
-.titlebar-min, .titlebar-max { -moz-appearance: none !important;
-															 background: transparent !important;
-															 stroke: var(--theme-titlebar-default-icon) !important;
-															 border: 2px solid transparent !important;
-															 box-shadow: 0 0 10px transparent !important; }
-
-.titlebar-min:hover,.titlebar-max:hover { background: var(--theme-gradient-grey) !important;
-																		border: 2px solid var(--theme-outline-button-purple) !important;
-																		box-shadow: 0 0 10px var(--theme-outline-button-shadow-purple) !important;
-																		border-radius: 0.5em !important;
-																		stroke: var(--theme-button-highlight) !important;	}
-
-.titlebar-close { -moz-appearance: none !important;
-												background: transparent !important;
-												stroke: var(--theme-titlebar-close-icon) !important;
-												border: 2px solid transparent !important;
-												box-shadow: 0 0 10px transparent !important; }
-
-.titlebar-close:hover { background: var(--theme-gradient-orange) !important;
-													  border: 2px solid var(--theme-outline-button-purple) !important;
-													  box-shadow: 0 0 10px var(--theme-outline-button-shadow-purple) !important;
-													  border-radius: 0.5em !important;
-													  stroke: var(--theme-titlebar-close-highlight-icon:) !important; }
-
-
-
-
 
 
 

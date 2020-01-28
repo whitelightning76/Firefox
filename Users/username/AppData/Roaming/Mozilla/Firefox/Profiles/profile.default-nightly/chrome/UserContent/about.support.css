@@ -1,0 +1,52 @@
+@namespace html "http://www.w3.org/1999/xhtml";
+@namespace xul "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul";
+
+/* ------------------------------------------------------------------------------------------------------------------------------*/
+/* -                                                      ABOOUT:LOGO                                                           -*/
+/* ------------------------------------------------------------------------------------------------------------------------------*/
+
+@-moz-document url-prefix(about:support) {  
+
+body {  background: var(--theme-background) !important; }
+
+html|a, .text-link {  color: var(--theme-text-default) !important; }
+html|a:hover, .text-link:hover { color: var(--theme-text-highlight) !important; filter: brightness(125%) !important; text-decoration: underline !important; }
+
+#restart-in-safe-mode-button,
+#reset-box-button { background: var(--theme-gradient-purple) !important; /* create new login button */
+					color: var(--theme-text-default) !important;
+					border: 1px solid var(--theme-outline-selection-box-purple) !important;
+					box-shadow: 0 0 1px var(--theme-outline-selection-box-shadow-purple) !important;
+					border-radius: 0.3em !important; }
+
+#restart-in-safe-mode-button:not([disabled="true"]):hover,
+#reset-box-button:not([disabled="true"]):hover{ background: var(--theme-gradient-red) !important;
+												color: var(--theme-text-highlight) !important;
+												border: 1px var(--theme-outline-selection-box-grey) solid !important;
+												box-shadow: 0 0 1px var(--theme-outline-selection-box-shadow-grey) !important; }
+
+#copy-raw-data-to-clipboard,
+#copy-to-clipboard { background: var(--theme-gradient-purple) !important; /* copy to clipboard buttons */
+					 color: var(--theme-text-default) !important;
+					 border: 1px solid var(--theme-outline-selection-box-purple) !important;
+					 box-shadow: 0 0 1px var(--theme-outline-selection-box-shadow-purple) !important;
+					 border-radius: 0.3em !important; }
+
+#copy-raw-data-to-clipboard:not([disabled="true"]):hover,
+#copy-to-clipboard:not([disabled="true"]):hover { background: var(--theme-gradient-grey) !important;
+												  color: var(--theme-text-highlight) !important;
+												  border: 1px var(--theme-outline-selection-box-grey) solid !important;
+												  box-shadow: 0 0 1px var(--theme-outline-selection-box-shadow-grey) !important; }
+
+
+
+
+th.column { background: var(--theme-background-purple) !important; }
+th { background: var(--theme-background-purple) !important; }
+
+td { background: var(--theme-background) !important; }
+
+
+
+}
+

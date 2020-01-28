@@ -1,0 +1,235 @@
+@namespace html "http://www.w3.org/1999/xhtml";
+@namespace xul "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul";
+
+/* ------------------------------------------------------------------------------------------------------------------------------*/
+/* -                                                     Library                                                                -*/
+/* ------------------------------------------------------------------------------------------------------------------------------*/
+
+@-moz-document url(chrome://browser/content/places/places.xul) {
+
+
+
+
+
+
+
+/* NOG DOEN 
+
+SEARCH
+MENUS
+CONTEXT INFO SCREEN.
+DOWNLOADS
+*/
+
+
+
+
+
+
+
+
+* { scrollbar-color: var(--theme-scrollbar-thumb) var(--theme-scrollbar-background) !important; scrollbar-width: thin !important; }
+
+* { font-family: var(--theme-font) !important; }
+
+toolbar { background: var(--theme-background) !important; color: var(--theme-text-default) !important; }
+
+#back-button,
+#forward-button { border: 1px solid transparent !important;
+				  box-shadow: 0 0 10px transparent !important;
+				  border-radius: 1000px !important;
+				  padding: 4px !important;
+				  margin: 0px !important;
+				  width: 32px !important;
+				  height: 32px !important; }
+
+
+#back-button:not(:-moz-any([disabled], [open], :active)) > .toolbarbutton-icon,
+#forward-button:not(:-moz-any([disabled], [open], :active)) > .toolbarbutton-icon { background: var(--theme-gradient-purple-active) !important;
+																				    border: 1px solid var(--theme-outline-selection-box-purple) !important; 
+																				    box-shadow: 0 0 10px var(--theme-outline-selection-box-shadow-purple) !important;
+																				    border-radius: 1000px !important;
+																				    margin: 2px !important; }
+
+#back-button:-moz-any(:hover, :focus, :active,[open]):not(:-moz-any([disabled])) > .toolbarbutton-icon,
+#forward-button:-moz-any(:hover, :focus, :active, [open]):not(:-moz-any([disabled])) > .toolbarbutton-icon { fill: var(--theme-button-highlight) !important;
+																											 background: var(--theme-gradient-purple) !important;
+																											 border: 2px solid var(--theme-outline-button-purple) !important;
+																											 box-shadow: 0 0 10px var(--theme-outline-button-shadow-purple) !important;
+																											 border-radius: 1000px !important;
+																											 margin: 2px !important; }
+
+#places #downloadsRichListBox { -moz-appearance: none !important;
+								color: var(--theme-text-default) !important;
+								background-color: var(--theme-background) !important; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+#placesList { -moz-appearance: none !important;
+			  color: var(--theme-text-default) !important;
+			  background-color: var(--theme-background) !important; }
+
+#placeContent treechildren:not(.autocomplete-treebody)::-moz-tree-cell-text() { color: var(--theme-text-default) !important; }
+
+#places treechildren::-moz-tree-image { fill: var(--theme-checkbox-check) !important }
+#places treechildren::-moz-tree-row { background-color: transparent !important; }
+
+#placesList>treechildren::-moz-tree-row(selected) ,
+#places treechildren:not(.autocomplete-treebody)::-moz-tree-row(selected) { -moz-appearance: none !important;
+																			-moz-font-smoothing-background-color: none !important;
+																			background-image: var(--theme-gradient-purple) !important;
+																			border: 1px var(--theme-outline-selection-box-purple) solid !important;
+																			box-shadow: 0 0 1px var(--theme-outline-selection-box-shadow-purple) !important; }
+
+#placesList>treechildren::-moz-tree-cell-text(selected) ,
+#places treechildren:not(.autocomplete-treebody)::-moz-tree-cell-text(selected) { color: var(--theme-text-highlight) !important;
+																				  filter: brightness(125%) !important; }
+
+#places treechildren::-moz-tree-row(hover) { background: var(--theme-gradient-grey) !important;  /* hover list */
+											 border: 1px var(--theme-outline-selection-box-purple) solid !important;
+											 box-shadow: 0 0 1px var(--theme-outline-selection-box-shadow-purple) !important; }
+
+#placesList > treechildren::-moz-tree-cell-text(hover),
+#places treechildren:not(.autocomplete-treebody)::-moz-tree-cell-text(hover),
+#places treechildren::-moz-tree-cell-text(hover) { color: var(--theme-text-highlight) !important;
+												   filter: brightness(125%) !important;
+												   background: none !important; }
+
+#placesView treechildren::-moz-tree-row { background-color: transparent !important; min-height: 24px !important; }
+
+#placesView > splitter { background-color: var(--theme-outline-selection-box-purple) !important; }
+
+#contentView treecol { -moz-appearance: none !important;
+					   border: none !important;
+					   background: var(--theme-gradient-titlebar) !important;
+					   color: var(--theme-text-default) !important; }
+
+#detailsDeck { border: none !important;
+			   background-color: var(--theme-background) !important;
+			   color: var(--theme-text-default) !important; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	/*.BMB_bookmarksPopup .bookmark-item[container] {
+		fill: red !important;
+	}*/
+
+	#placesView treechildren::-moz-tree-image {
+		list-style-image: url("foldervert.png") !important;
+	}
+
+	tree {
+		background-color: var(--theme-background) !important;
+		/*var(--in-content-box-background)*/
+	}
+
+	#editBMPanel_tagsSelectorExpander.expander-down {
+		-moz-appearance: -moz-mac-disclosure-button-closed !important;
+		filter: invert(79%) !important;
+	}
+
+	#editBMPanel_tagsSelectorExpander.expander-up {
+		-moz-appearance: -moz-mac-disclosure-button-open !important;
+		filter: invert(79%) !important;
+	}
+
+	#main-menubar {
+		background-color: var(--in-content-category-header-background) !important;
+	}
+
+	#main-menubar>* {
+		color: var(--theme-text-default) !important;
+	}
+
+	#main-menubar> :hover,
+	menubar>menu[_moz-menuactive="true"][open="true"] {
+		-moz-appearance: none !important;
+		background: var(--in-content-page-background) !important;
+	}
+
+	@media screen and (-moz-windows-theme),
+	screen and (-moz-windows-classic),
+	screen and (-moz-windows-default-theme),
+	screen and (-moz-os-version: windows-win7),
+	screen and (-moz-os-version: windows-win8),
+	screen and (-moz-os-version: windows-win10) {
+
+		#metaTagsCaption,
+		#security-identity,
+		#security-identity-groupbox,
+		#security-privacy,
+		#security-privacy-groupbox,
+		#security-technical,
+		#security-technical-groupbox {
+			-moz-appearance: none !important;
+			background-color: var(--in-content-page-background) !important;
+			border: none !important;
+			color: var(--in-content-selected-text) !important;
+		}
+
+		#placesMenu>menu {
+			color: var(--theme-text-default) !important;
+		}
+
+		#security-identity-groupbox,
+		#security-privacy-groupbox,
+		#security-technical-groupbox {
+			-moz-appearance: none !important;
+			background-color: var(--in-content-category-header-background) !important;
+		}
+
+		#places treechildren:not(.autocomplete-treebody)::-moz-tree-row(hover):not(.autocomplete-treebody)::-moz-tree-cell-text(selected) {
+			background: 0 0 !important;
+			-moz-border-top-colors: transparent !important;
+			-moz-border-right-colors: transparent !important;
+			-moz-border-left-colors: transparent !important;
+			-moz-border-bottom-colors: transparent !important;
+		}
+	}
+
+	@media screen and (-moz-os-version: windows-win7) {
+		treechildren {
+			--treechildren-outline: none !important;
+		}
+	}
+}

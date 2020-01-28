@@ -1,0 +1,31 @@
+@namespace html "http://www.w3.org/1999/xhtml";
+@namespace xul "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul";
+
+
+/* ------------------------------------------------------------------------------------------------------------------------------*/
+/* -                                                   ABOOUT:CERTIFICATE                                                       -*/
+/* ------------------------------------------------------------------------------------------------------------------------------*/
+@-moz-document url-prefix(about:certificate) {  
+
+.tab { background: var(--theme-background-menu) !important;
+	   color: var(--theme-text-default) !important;
+	   font-family: Verdana !important;
+	   font-size: 14px !important; }
+
+.tab.selected {  -moz-appearance: none !important; 
+				background-image: var(--theme-gradient-purple) !important;
+				color: var(--theme-text-highlight) !important;
+				filter: brightness(125%) !important;
+				border: 1px solid var(--theme-outline-selection-box-purple) !important;
+				box-shadow: 0 0 1px var(--theme-outline-selection-box-shadow-purple) !important; border-radius: 0.3em !important; }
+
+.tab:hover { background: var(--theme-gradient-grey) !important;
+			 color: var(--theme-text-highlight) !important;
+			 border: 1px var(--theme-outline-selection-box-grey) solid !important;
+			 box-shadow: 0 0 1px var(--theme-outline-selection-box-shadow-grey) !important; }
+
+}
+
+
+
+

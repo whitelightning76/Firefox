@@ -1,0 +1,25 @@
+/* ------------------------------------------------------------------------------------------------------------------------------*/
+/* -                                                     CHECKBOXES	                                                            -*/
+/* ------------------------------------------------------------------------------------------------------------------------------*/
+
+
+
+#main-menubar .menu-iconic-left, /* when not checked */
+#toolbar-context-menu .menu-iconic-left,
+* menuitem[type="checkbox"] > .menu-iconic-left,
+* menuitem[checked="true"] > .menu-iconic-left ,
+* menuitem[type="radio"] > .menu-iconic-left { -moz-appearance: none !important; }
+
+* menuitem[type="checkbox"] > .menu-iconic-left > .menu-iconic-icon { background: inherit !important; } /* box background */
+* menuitem[checked="true"] > .menu-iconic-left > .menu-iconic-icon, /* icon when checked */
+* menuitem[type="radio"] > .menu-iconic-left > .menu-iconic-icon { display: inherit !important;
+																   background: transparent url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 16 16" ><path fill="var(--theme-checkbox-check)" d="M 13.09,2.87 C 13.09,2.87 6.00,11.00 6.00,11.00 6.00,11.00 2.00,9.00 2.00,9.00 4.25,12.81 7.00,14.00 7.00,14.00 9.24,10.42 12.04,7.39 13.09,2.87 Z" /></svg>') no-repeat center center !important; }
+
+#sidebarMenu-popup > .subviewbutton[checked="true"] { list-style-image: none !important;
+													  background: url(chrome://global/skin/icons/check.svg) no-repeat transparent !important;
+													  background-size: 16px 16px !important;
+													  fill: var(--theme-checkbox-check) !important; }
+
+#sidebarMenu-popup > .subviewbutton[checked="true"] { background-position: center left 7px !important; }
+
+

@@ -1,0 +1,178 @@
+/* ------------------------------------------------------------------------------------------------------------------------------*/
+/* -                                                     Pageinfo                                                               -*/
+/* ------------------------------------------------------------------------------------------------------------------------------*/
+
+@namespace html "http://www.w3.org/1999/xhtml";
+@namespace xul "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul";
+
+
+
+#viewGroup { background: var(--theme-background) !important; }
+
+#viewGroup > radio[data-l10n-id="general-tab"],
+#viewGroup > radio[data-l10n-id="media-tab"],
+#viewGroup > radio[data-l10n-id="perm-tab"],
+#viewGroup > radio[data-l10n-id="security-tab"] { background-color: var(--theme-background) !important;
+												  color: var(--theme-text-default) !important; }
+
+#viewGroup > radio { border: 1px solid transparent !important;
+					 box-shadow: 0 0 1px transparent !important;
+					 border-radius: 0.3em !important;}
+
+#viewGroup > radio[selected] { background: var(--theme-gradient-purple) !important;
+							   color: var(--theme-text-default) !important;
+							   border: 1px solid var(--theme-outline-selection-box-purple) !important;
+							   box-shadow: 0 0 1px var(--theme-outline-selection-box-shadow-purple) !important;
+							   border-radius: 0.3em !important; }
+
+
+#viewGroup > radio:hover { background: var(--theme-gradient-grey) !important;
+						   color: var(--theme-text-highlight) !important;
+						   border: 1px var(--theme-outline-selection-box-grey) solid !important;
+						   box-shadow: 0 0 1px var(--theme-outline-selection-box-shadow-grey) !important }
+
+
+
+
+#generalPanel { background-color: var(--theme-background) !important;
+				color: var(--theme-text-default) !important; }
+
+tr, td, th { background-color: var(--theme-background) !important;
+			 color: var(--theme-text-default) !important; }
+			 
+#titletext,
+#urltext,
+#typetext,
+#modetext,
+#encodingtext,
+#sizetext,
+#refertext { background-color: var(--theme-background) !important;
+			 color: var(--theme-text-highlight) !important;
+			 filter: brightness(125%) !important; }
+
+
+
+#meta-name,
+#meta-content { background-color: var(--theme-background) !important;
+				color: red !important; }
+
+
+
+
+
+
+
+
+generalTable,
+generalTitle,
+general-title,
+general-url,
+general-mode,
+general-encoding,
+general-size,
+general-referrer,
+general-modified,
+general-meta-name,
+.general-meta-content { background-color: var(--theme-background) !important;
+						color: red !important; }
+
+
+/*
+
+mainDeck" flex="1">
+    <!-- General page information -->
+    <vbox id="generalPanel">
+      <table id="generalTable" xmlns="http://www.w3.org/1999/xhtml">
+        <tr id="generalTitle">
+          <th>
+            <xul:label control="titletext" data-l10n-id="general-title"/>
+          </th>
+          <td>
+            <input readonly="readonly" id="titletext" data-l10n-attrs="value"/>
+          </td>
+        </tr>
+        <tr id="generalURLRow">
+          <th>
+            <xul:label control="urltext" data-l10n-id="general-url"/>
+          </th>
+          <td>
+            <input readonly="readonly" id="urltext"/>
+          </td>
+        </tr>
+        <tr class="tableSeparator"/>
+        <tr id="generalTypeRow">
+          <th>
+            <xul:label control="typetext" data-l10n-id="general-type"/>
+          </th>
+          <td>
+            <input readonly="readonly" id="typetext"/>
+          </td>
+        </tr>
+        <tr id="generalModeRow">
+          <th>
+            <xul:label control="modetext" data-l10n-id="general-mode"/>
+          </th>
+          <td>
+            <input readonly="readonly" id="modetext" data-l10n-attrs="value"/>
+          </td>
+        </tr>
+        <tr id="generalEncodingRow">
+          <th>
+            <xul:label control="encodingtext" data-l10n-id="general-encoding"/>
+          </th>
+          <td>
+            <input readonly="readonly" id="encodingtext"/>
+          </td>
+        </tr>
+        <tr id="generalSizeRow">
+          <th>
+            <xul:label control="sizetext" data-l10n-id="general-size"/>
+          </th>
+          <td>
+            <input readonly="readonly" id="sizetext" data-l10n-attrs="value"/>
+          </td>
+        </tr>
+        <tr id="generalReferrerRow">
+          <th>
+            <xul:label control="refertext" data-l10n-id="general-referrer"/>
+          </th>
+          <td>
+            <input readonly="readonly" id="refertext"/>
+          </td>
+        </tr>
+        <tr class="tableSeparator"/>
+        <tr id="generalModifiedRow">
+          <th>
+            <xul:label control="modifiedtext" data-l10n-id="general-modified"/>
+          </th>
+          <td>
+            <input readonly="readonly" id="modifiedtext"/>
+          </td>
+        </tr>
+      </table>
+      <separator class="thin"/>
+      <vbox id="metaTags" flex="1">
+        <label control="metatree" id="metaTagsCaption" class="header"/>
+        <tree id="metatree" flex="1" hidecolumnpicker="true" contextmenu="picontext">
+          <treecols>
+            <treecol id="meta-name"    data-l10n-id="general-meta-name"
+                     persist="width" flex="1"
+                     onclick="gMetaView.onPageMediaSort('meta-name');"/>
+            <splitter class="tree-splitter"/>
+            <treecol id="meta-content" data-l10n-id="general-meta-content"
+                     persist="width" flex="4"
+                     onclick="gMetaView.onPageMediaSort('meta-content');"/>
+          </treecols>
+          <treechildren id="metatreechildren" flex="1"/>
+        </tree>
+      </vbox>
+      <hbox pack="end">
+        <button command="cmd_help" data-l10n-id="help-button" dlgtype="help"/>
+      </hbox>
+    </vbox>
+
+
+*/
+
+
+

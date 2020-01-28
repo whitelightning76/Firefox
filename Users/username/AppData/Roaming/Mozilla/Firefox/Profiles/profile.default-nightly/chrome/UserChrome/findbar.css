@@ -1,0 +1,72 @@
+/* ------------------------------------------------------------------------------------------------------------------------------*/
+/* -                                                  FIND BAR       	                                                        -*/
+/* ------------------------------------------------------------------------------------------------------------------------------*/
+
+.browserContainer > findbar { background-image: var(--theme-gradient-black2) !important;
+							  border-top: 1.5px solid var(--theme-outline-selection-box-purple) !important; }
+
+
+.findbar-textbox { border: 1px var(--theme-outline-selection-box-purple) solid !important;
+				   box-shadow: 0 0 1px var(--theme-outline-selection-box-shadow-purple) !important;
+				   transition: 300ms !important; }
+
+.findbar-textbox input>.anonymous-div {
+    color: var(--theme-text-highlight) !important;
+    opacity: 1 !important;
+}
+
+.findbar-textbox,
+.findbar-textbox:-moz-lwtheme {
+    background-color: transparent !important;
+    color: var(--theme-text-highlight) !important;
+}
+
+.findbar-textbox:focus {
+    background-color: transparent !important;
+    color: var(--theme-text-highlight) !important;
+    transition: 300ms !important;
+}
+
+.findbar-textbox[status="notfound"] {
+    background-color: transparent !important;
+    color: rgba(255, 255, 255, 0.5) !important;
+    transition: 400ms !important;
+}
+
+findbar:focus-within .findbar-textbox:not([status="notfound"]) {
+    background-color: transparent !important;
+    color: var(--theme-text-highlight) !important;
+    transition: 300ms !important;
+}
+
+.findbar-find-previous,
+.findbar-find-next { background: var(--theme-gradient-purple) !important;
+					 border: 1px solid var(--theme-outline-selection-box-purple) !important;
+					 box-shadow: 0 0 1px var(--theme-outline-selection-box-shadow-purple) !important;
+					 border-radius: 0.3em !important;
+					 -moz-context-properties: fill important;
+					 color: var(--theme-text-highlight) !important;
+					 fill: var(--theme-text-highlight) !important; }
+
+.findbar-find-previous:hover,
+.findbar-find-next:hover { background: var(--theme-gradient-grey) !important;
+						   border: 1px var(--theme-outline-selection-box-grey) solid !important;
+						   box-shadow: 0 0 1px var(--theme-outline-selection-box-shadow-grey) !important; }
+
+
+
+	
+.findbar-highlight,
+.findbar-case-sensitive,
+.findbar-entire-word { background: var(--theme-gradient-purple) !important;
+					   color: var(--theme-text-default) !important;
+					   border: 1px solid var(--theme-outline-selection-box-purple) !important;
+					   box-shadow: 0 0 1px var(--theme-outline-selection-box-shadow-purple) !important;
+					   border-radius: 0.3em !important; }
+
+.findbar-highlight:hover,
+.findbar-case-sensitive:hover,
+.findbar-entire-word:hover { background: var(--theme-gradient-grey) !important;
+							 color: var(--theme-text-highlight) !important;
+							 border: 1px var(--theme-outline-selection-box-grey) solid !important;
+							 box-shadow: 0 0 1px var(--theme-outline-selection-box-shadow-grey) !important; }

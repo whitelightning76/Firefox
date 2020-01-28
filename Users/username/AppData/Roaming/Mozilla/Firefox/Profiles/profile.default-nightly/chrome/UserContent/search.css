@@ -1,0 +1,26 @@
+@namespace html "http://www.w3.org/1999/xhtml";
+@namespace xul "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul";
+
+/* ------------------------------------------------------------------------------------------------------------------------------*/
+/* -                                                        SEARCH                                                              -*/
+/* ------------------------------------------------------------------------------------------------------------------------------*/
+
+@-moz-document  url-prefix(about:addons), url-prefix(about:preferences), url-prefix(chrome://mozapps/content/extensions/) {
+	
+/* SEARCH BOX */
+#searchInput,
+search-addons > search-textbox { color: var(--theme-text-highlight) !important; border: 2px solid var(--theme-outline-search) !important; box-shadow: 0 0 1px var(--theme-outline-search-shadow) !important; border-radius: 0.5em !important; }
+
+#searchInput[focused=true],
+search-addons > search-textbox[focused=true] { background-color: var(--theme-background) !important;
+							   color: var(--theme-text-highlight) !important;
+							   border: 2px solid var(--theme-outline-search-hover) !important;
+							   box-shadow: 0 0 1px var(--theme-outline-search-hover-shadow) !important;
+							   border-radius: none !important; }
+							   
+.textbox-search-icon[searchbutton]:not([disabled]) { fill: var(--theme-urlbar-default-icon) !important; }
+.textbox-search-icon[searchbutton]:not([disabled]):hover { fill: var(--theme-urlbar-search-icon) !important; filter: brightness(125%) !important; }
+
+
+}
+

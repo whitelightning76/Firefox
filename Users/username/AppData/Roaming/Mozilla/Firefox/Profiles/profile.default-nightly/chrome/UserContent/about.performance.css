@@ -1,0 +1,60 @@
+@namespace html "http://www.w3.org/1999/xhtml";
+@namespace xul "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul";
+
+/* ------------------------------------------------------------------------------------------------------------------------------*/
+/* -                                                   ABOOUT:PERFORMANCE                                                       -*/
+/* ------------------------------------------------------------------------------------------------------------------------------*/
+@-moz-document url-prefix(about:performance) {  
+
+
+#dispatch-table { background: var(--theme-background-menu) !important;
+				  color: var(--theme-text-default) !important;
+				  font-family: Verdana !important;
+				  font-size: 14px !important;
+				  border-top: 1px var(--theme-outline-selection-box-purple) solid !important;
+				  border-right: 1px var(--theme-outline-selection-box-purple) solid !important;
+				  border-left: 1px var(--theme-outline-selection-box-purple) solid !important; }
+
+#dispatch-thead tr td,
+#dispatch-thead tr td#column-name.clickable,
+#dispatch-thead tr td#column-type.clickable,
+#dispatch-thead tr td#column-energy-impact.clickable,
+#dispatch-thead tr td#dispatch-thead tr td#column-memory.clickable { background: var(--theme-gradient-cards-purple) !important;
+																	 color: var(--theme-text-default) !important;
+																	 font-family: Verdana !important;
+																	 font-size: 14px !important; }
+
+#dispatch-thead tr td:hover,
+#dispatch-thead tr td#column-name.clickable:hover,
+#dispatch-thead tr td#column-type.clickable:hover,
+#dispatch-thead tr td#column-energy-impact.clickable:hover,
+#dispatch-thead tr td#dispatch-thead tr td#column-memory.clickable:hover { background: var(--theme-gradient-grey) !important;
+																		   color: var(--theme-text-highlight) !important;
+																		   filter: brightness(125%) !important;
+																		   border: 1px var(--theme-outline-selection-box-purple) solid !important; }
+																	
+tr { border-top: 1px transparent solid !important;
+border-bottom: 1px transparent solid !important; }
+
+tr:hover { background: var(--theme-gradient-grey) !important;
+		   color: var(--theme-text-highlight) !important;
+		   filter: brightness(125%) !important;
+		   border-top: 1px var(--theme-outline-selection-box-purple) solid !important;
+		   border-bottom: 1px var(--theme-outline-selection-box-purple) solid !important; }
+
+#dispatch-tbody > tr[selected] > td { background: var(--theme-gradient-purple) !important;
+									  color: var(--theme-text-highlight) !important;
+									  filter: brightness(125%) !important;
+									  border-top: 1px var(--theme-outline-selection-box-purple) solid !important;
+									  border-bottom: 1px var(--theme-outline-selection-box-purple) solid !important; }
+
+#dispatch-tbody tr td span.action-icon.addon-icon { color: var(--theme-text-highlight) !important; }
+#dispatch-tbody tr td span.action-icon.close-icon { color: var(--theme-close-icon) !important; }
+
+.energy-impact { --bar-width: 0; background: linear-gradient(to right, var(--theme-close-icon-dark) calc(var(--bar-width) * 1%), transparent calc(var(--bar-width) * 1%)) !important; }
+.energy-impact:dir(rtl) { background: linear-gradient(to left, var(--theme-close-icon-dark) calc(var(--bar-width) * 1%), transparent calc(var(--bar-width) * 1%)) !important; }
+
+}
+
+
+

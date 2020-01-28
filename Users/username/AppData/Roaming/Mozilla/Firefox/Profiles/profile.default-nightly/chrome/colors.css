@@ -1,0 +1,251 @@
+  *|*:root { 
+/* ------------------------------------------------------------------------------------------------------------------------------*/
+/* -                                                     THEME VARIABLES                                                        -*/
+/* ------------------------------------------------------------------------------------------------------------------------------*/
+
+/* TITLEBAR */
+--theme-titlebar: linear-gradient(hsl(211,33%,32%), hsl(209,53%,10%) 95%) !important; /* old nightly */
+--theme-titlebar2: linear-gradient(hsl(240, 25%, 20%), hsl(240, 23%, 5%) 65%) !important; /* purple */
+--theme-titlebar3: -moz-linear-gradient(90deg, rgb(48, 48, 80) 0%, rgb(19, 19, 32) 20%, rgb(48, 48, 80) 80%) ;
+--theme-titlebar4: linear-gradient(hsl(240, 25%, 25%), hsl(209,53%,10%) 95%) !important; /* old nightly */
+
+/* INACTIVE TITLEBAR */
+--theme-titlebar-inactive: rgb(230, 230, 230) !important;
+
+/* BACKGROUND */
+--theme-background: rgb(0, 0, 0) ;
+--theme-background2: rgb(0, 0, 0) ;
+--theme-background-hover: rgb(65, 65, 65) ;
+--theme-background-purple: rgb(38, 38, 64) ;
+
+/* TEXT */
+--theme-text-default: rgb(220, 220, 220) ;
+--theme-text-disabled: rgb(102, 102, 102) ;
+--theme-text-notselected: rgb(166, 166, 166) ;
+--theme-text-selected: rgb(128, 255, 0) ;
+--theme-text-highlight: rgb(255, 255, 255) ;
+--theme-text-highlight-less: rgb(252, 252, 252) ;
+--theme-text-shortcut-highlight: rgb(192, 192, 192) ;
+
+/* TOOLBAR BUTTONS */
+--theme-button-background: rgb(84, 84, 84) ;
+--theme-button-normal: rgb(230, 230, 230) ;
+--theme-button-highlight: rgb(255, 255, 255) ;
+/* OUTLINE */
+--theme-outline-menu: rgb(64, 64, 64) ;
+--theme-outline-menu-shadow: rgb(128, 128, 128) ;
+--theme-outline-search: rgb(89, 89, 89) ;
+--theme-outline-search-shadow: rgb(64, 64, 64) ;
+--theme-outline-search-hover: rgb(140, 140, 140) ;
+--theme-outline-search-hover-shadow: rgb(102, 102, 102) ;
+--theme-outline-button-purple: rgb(126, 126, 180) ;
+--theme-outline-button-shadow-purple: rgb(94, 94, 161);
+--theme-outline-selection-box-purple: rgb(76, 76, 130) ;
+--theme-outline-selection-box-shadow-purple: rgb(159, 159, 198) ;
+--theme-outline-selection-box-grey: rgb(102, 102, 102) ;
+--theme-outline-selection-box-shadow-grey: rgb(179, 179, 179) ;
+--theme-outline-selection-box-red: rgb(179, 0, 0) ;
+--theme-outline-selection-box-shadow-red: rgb(153, 0, 0) ;
+--theme-outline-orange: rgb(255, 140, 0) ;
+
+/* TAB LINE */
+--theme-tabline: rgb(77, 153, 0) ;
+
+/* ICONS */	 
+--theme-titlebar-default-icon: rgb(179, 179, 179) ;
+--theme-titlebar-close-icon: rgb(255, 12, 0) ;
+--theme-titlebar-close-highlight-icon: rgb(255, 61, 51) ;
+--theme-titlebar-new-tab-icon: rgb(102, 204, 0) ;
+--theme-titlebar-undo-tab-icon: rgb(255, 12, 0) ;
+
+--theme-tab-close-icon: rgb(255, 12, 0) ;
+--theme-tab-sound-disabled-icon: rgb(205, 50, 83) ;
+--theme-tab-sound-icon: rgb(50, 205, 55) ;
+--theme-tab-newtab-icon: rgb(102, 211, 0) ;
+
+--theme-navbar-default-icon: rgb(179, 179, 179);
+--theme-navbar-reload-icon: rgb(102, 204, 0) ;
+--theme-navbar-reload-highlight-icon: rgb(128, 255, 0) ;
+--theme-navbar-stop-icon: rgb(255, 12, 0) ;
+--theme-navbar-stop-highlight-icon: rgb(255, 61, 51) ;
+
+--theme-urlbar-default-icon: rgb(179, 179, 179) ;
+--theme-urlbar-search-icon: rgb(0, 172, 230) ;
+--theme-urlbar-trackers-icon: rgb(138, 43, 226) ;
+--theme-urlbar-identity-icon: rgb(255, 215, 0) ;
+--theme-urlbar-favorite-icon: rgb(230, 230, 0) ;
+--theme-urlbar-search-settings-icon: rgb(211, 211, 211) ;
+--theme-urlbar-go-icon: rgb(102, 204, 0) ;
+--theme-urlbar-go-highlight-icon: rgb(128, 255, 0) ;
+
+--theme-download-icon: rgb(255, 255, 255) ;
+--theme-download-progress-icon: rgb(102, 204, 0) ;
+--theme-download-success-icon: rgb(128, 255, 0) ;
+--theme-folder-icon: rgb(239, 205, 75) ;
+
+--theme-hamburger-menu-fxa-label-icon: none ;
+--theme-hamburger-menu-fxa-menu-sendtab-icon: rgb(192, 192, 192) ;
+--theme-hamburger-menu-fxa-menu-connect-device-icon: rgb(192, 192, 192) ;
+--theme-hamburger-menu-fxa-menu-sync-now-icon: rgb(102, 204, 0) ;
+--theme-hamburger-menu-fxa-menu-remote-tabs-icon: rgb(255, 12, 0) ;
+--theme-hamburger-menu-fxa-menu-view-sidebar-icon: rgb(192, 192, 192) ;
+--theme-hamburger-menu-protection-report-icon: rgb(192, 192, 192) ;
+--theme-hamburger-menu-new-window-icon: rgb(192, 192, 192) ;
+--theme-hamburger-menu-private-window-icon: rgb(192, 192, 192) ;
+--theme-hamburger-menu-zoomEnlarge-icon: rgb(192, 192, 192) ;
+--theme-hamburger-menu-zoomReduce-icon: rgb(192, 192, 192) ;
+--theme-hamburger-menu-fullscreen-icon: rgb(192, 192, 192) ;
+--theme-hamburger-menu-fullscreen-checked-icon: rgb(192, 192, 192) ;
+--theme-hamburger-menu-cut-icon: rgb(192, 192, 192) ;
+--theme-hamburger-menu-copy-icon: rgb(192, 192, 192) ;
+--theme-hamburger-menu-paste-icon: rgb(192, 192, 192) ;
+--theme-hamburger-menu-library-icon: rgb(192, 192, 192) ;
+--theme-hamburger-menu-library-bookmarks-icon: rgb(230, 230, 0) ;
+--theme-hamburger-menu-library-pocket-icon: rgb(192, 192, 192) ;
+--theme-hamburger-menu-library-history-icon: rgb(65, 105, 225) ;
+--theme-hamburger-menu-library-downloads-icon: rgb(192, 192, 192) ;
+--theme-hamburger-menu-logins-icon: rgb(255, 215, 0) ;
+--theme-hamburger-menu-addons-icon: rgb(89, 179, 0) ;
+--theme-hamburger-menu-preferences-icon: rgb(211, 211, 211) ;
+--theme-hamburger-menu-customize-icon: rgb(192, 192, 192) ;
+--theme-hamburger-menu-open-file-icon: rgb(192, 192, 192) ;
+--theme-hamburger-menu-save-file-icon: rgb(192, 192, 192) ;
+--theme-hamburger-menu-print-icon: rgb(179, 179, 179) ;
+--theme-hamburger-menu-find-icon: rgb(0, 172, 230) ;
+--theme-hamburger-menu-more-icon: rgb(192, 192, 192) ;
+--theme-hamburger-menu-developer-icon: rgb(255, 140, 0) ;
+--theme-hamburger-menu-whatsnew-icon: rgb(192, 192, 192) ;
+--theme-hamburger-menu-help-icon: rgb(240, 230, 140) ;
+--theme-hamburger-menu-quit-icon: rgb(255, 0, 0) ;
+--theme-hamburger-menu-taskmanager-icon: rgb(135, 206, 235) ;
+
+--theme-bookmarks-bar-default-icon: rgb(179, 179, 179);
+
+--theme-sidebar-close-icon: rgb(255, 12, 0) ;
+--theme-sidebar-favorite-icon: rgb(230, 230, 0) ;
+--theme-sidebar-history-icon: rgb(65, 105, 225) ;
+--theme-sidebar-synced-tabs-icon: #27ae60 ;
+--theme-sidebar-cogwheel-icon: rgb(169, 183, 185) ;		
+--theme-sidebar-folder-arrow : rgb(192, 192, 192) ;
+--theme-sidebar-folder-icon: rgb(239, 205, 75) ;
+--theme-sidebar-url-icon: rgb(182, 206, 226) ;
+
+--theme-contextmenu-default-icon: rgb(179, 179, 179) ;
+
+/* GRADIENTS */
+--theme-gradient-black: linear-gradient(315deg, #2d3436 0%, #000000 74%);
+--theme-gradient-black2: linear-gradient(180deg, #2d3436 0%, #000000 74%);
+--theme-gradient-grey: -moz-linear-gradient(45deg, rgb(65, 65, 65) 25%, rgb(102, 102, 102) 65%, rgb(65, 65, 65) 80%) ;
+--theme-gradient-purple: -moz-linear-gradient(225deg, rgb(48, 48, 80) 0%, rgb(19, 19, 32) 20%, rgb(48, 48, 80) 80%) ;
+--theme-gradient-purple-active: -moz-linear-gradient(225deg, rgb(67, 67, 112) 0%, rgb(38, 38, 64) 20%, rgb(67, 67, 112)) ;
+--theme-gradient-green: -moz-linear-gradient(225deg, rgb(38, 77, 0) 0%, rgb(13, 26, 0) 20%, rgb(38, 77, 0) 80%) ;
+--theme-gradient-red: -moz-linear-gradient(225deg, rgb(102, 0, 0) 0%, rgb(51, 0, 0) 20%,rgb(102, 0, 0) 80%) ;
+--theme-gradient-yellow: -moz-linear-gradient(225deg, rgb(102, 102, 0) 0%, rgb(51, 51, 0) 20%,rgb(102, 102, 0) 80%) ;
+--theme-gradient-orange: -moz-linear-gradient(225deg, rgb(128, 77, 0) 0%, rgb(51, 31, 0) 20%,rgb(128, 77, 0) 80%) ;
+--theme-gradient-titlebar: linear-gradient(hsl(240, 25%, 20%), hsl(240, 23%, 5%) 65%) ;
+--theme-gradient-cards-grey: -moz-linear-gradient(225deg, rgb(65, 65, 65) 0%, rgb(0, 0, 0) 20%, rgb(65, 65, 65) 80%) ;
+--theme-gradient-cards-grey-active: -moz-linear-gradient(225deg, rgb(85, 85, 85) 0%, rgb(0, 0, 0) 20%, rgb(85, 85, 85) 80%) ;
+--theme-gradient-cards-purple: -moz-linear-gradient(225deg, rgb(38, 38, 64) 0%, rgb(0, 0, 0) 20%, rgb(38, 38, 64) 80%) ;
+--theme-gradient-cards-purple-active: -moz-linear-gradient(225deg, rgb(58, 58, 92) 0%, rgb(0, 0, 0) 20%, rgb(58, 58, 92) 80%) ;
+
+/* CHECKBOX */
+--theme-checkbox-check: rgb(102, 204, 0) ;
+
+/* SCROLLBAR */
+/*--theme-scrollbar-thumb: rgb(67, 67, 112) ;*/
+--theme-scrollbar-thumb: rgba(67, 67, 112,0.75) ;
+--theme-scrollbar-background: rgba(255, 255, 255, 0) ;
+
+/* FINDBAR */
+--theme-findbar-close-icon: rgb(255, 12, 0) ;
+
+/* FONT */
+--theme-font: verdana ;
+
+
+
+
+
+/* ------------------------------------------------------------------------------------------------------------------------------*/
+/* -                                                    FIREFOX VARIABLES                                                       -*/
+/* ------------------------------------------------------------------------------------------------------------------------------*/
+
+/* TITLEBAR */
+--lwt-accent-color: var(--theme-titlebar1) !important;
+
+/* INACTIVE TITLEBAR */
+--lwt-accent-color-inactive: var(--theme-titlebar-inactive) !important;
+
+/* BACKGROUND */
+--toolbar-bgcolor: var(--theme-background2) !important; /* toolbar background */
+--toolbar-bgimage: none !important;
+--arrowpanel-background: var(--theme-background) !important; /* panel background */
+--lwt-toolbar-field-background-color: var(--theme-background) !important; /* urlbar field background */
+--autocomplete-popup-background: var(--theme-background) !important; /* urlbar results background */
+--in-content-page-background: var(--theme-background) !important;
+--toolbar-non-lwt-bgcolor:  var(--theme-background2) !important;
+--toolbar-non-lwt-bgimage: none !important;
+
+/* TEXT */
+--arrowpanel-color: var(--theme-text-default) !important; /*panel text */
+--toolbar-color: var(--theme-text-default) !important; /* toolbar text */
+--lwt-toolbar-field-color: var(--theme-text-default) !important; /* urlbar text */
+--lwt-text-color: var(--theme-text-default) !important; 
+--panel-disabled-color: var(--theme-text-disabled) !important; /* disabled panel text */
+--urlbar-popup-action-color: var(--theme-text-highlight) !important; /* urlbar action */
+--urlbar-popup-url-color: var(--theme-text-shortcut-highlight) !important; /*urlbar links */
+--in-content-page-color: var(theme-text-default) !important;
+--in-content-text-color: var(theme-text-default) !important;
+--toolbar-non-lwt-textcolor: var(--theme-text-default) !important;
+
+/* PANEL BORDER */
+--arrowpanel-border-color: var(--theme-text-highlight) !important;
+--in-content-border-active: transparent !important; /* button border active */
+--in-content-border-active-shadow: transparent !important;
+--in-content-border-color: transparent !important;
+--in-content-table-border-dark-color: transparent !important;
+--in-content-box-border-color: var(--theme-text-disabled) !important;
+
+/* checkbox */
+--in-content-box-border-color: var(--theme-text-highlight) !important; /* default box */
+--in-content-border-focus: var(--theme-checkbox-check) !important; /* hover box */
+--in-content-border-hover: var(--theme-checkbox-check) !important; /* text box hover */
+
+/* TOOLBAR BUTTONS */
+--toolbarbutton-icon-fill-opacity:1 !important;
+--toolbarbutton-hover-background: var(--theme-gradient-purple) !important;
+--toolbarbutton-active-background: var(--theme-gradient-purple) !important;
+--lwt-toolbarbutton-icon-fill: var(--theme-button-highlight) !important;
+
+/* URLBAR BORDER */
+--lwt-toolbar-field-border-color: var(theme-urlbar) !important;
+--lwt-toolbar-field-focus: var(--theme-outline-search-hover) !important;
+
+/* AUTOCOMPLETE */
+--autocomplete-popup-color: var(--theme-navbar-reload-highlight-icon) !important;
+--autocomplete-popup-background: var(--theme-outline-search) !important;
+--autocomplete-popup-highlight-background: var(--theme-navbar-reload-highlight-icon) !important;
+
+/* SEPERATORS IN URLBAR-SEARCH PANEL */
+--panel-separator-color: var(--theme-background) !important;
+--urlbar-separator-color:  var(--theme-urlbar) !important;
+
+/* LINE BELOW NAVIGATOR BOX */
+--chrome-content-separator-color: var(--theme-background) !important;
+
+/* tabs of extentions */
+--in-content-border-highlight: var(--theme-reload-icon) !important;
+--in-content-category-text-selected: var(--theme-reload-icon) !important;
+
+/* buttons */
+--theme-button-highlight: var(--theme-text-highlight) !important;
+--in-content-page-color: var(--theme-text-highlight) !important;
+--in-content-button-background-hover: var(--theme-gradient-grey) !important;
+--in-content-button-background-active: var(--theme-gradient-grey) !important;
+
+
+
+
+
+
+}

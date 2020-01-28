@@ -1,0 +1,215 @@
+@namespace html "http://www.w3.org/1999/xhtml";
+@namespace xul "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul";
+
+/* ------------------------------------------------------------------------------------------------------------------------------*/
+/* -                                                     ABOUT:PREFERENCES                                                      -*/
+/* ------------------------------------------------------------------------------------------------------------------------------*/
+
+@-moz-document url-prefix(about:preferences) {
+
+
+
+
+/* ------------------------------------------------------------------------------------------------------------------------------*/
+/* -                                                      SCROLLBAR     	                                                    -*/
+/* ------------------------------------------------------------------------------------------------------------------------------*/	
+/*
+* { scrollbar-color: var(--theme-scrollbar-thumb) var(--theme-scrollbar-background) !important; scrollbar-width: thin !important; }
+*/
+
+/* ------------------------------------------------------------------------------------------------------------------------------*/
+/* -                                                      CHECKBOXES    	                                                    -*/
+/* ------------------------------------------------------------------------------------------------------------------------------*/	
+
+* .checkbox-icon { background: transparent !important; }
+* .checkbox-check { fill: var(--theme-checkbox-check) !important; }
+
+
+/* ------------------------------------------------------------------------------------------------------------------------------*/
+/* -                                                        RADIO	                                                            -*/
+/* ------------------------------------------------------------------------------------------------------------------------------*/
+
+*.radio-check { fill: var(--theme-checkbox-check) !important; }
+
+
+/* ------------------------------------------------------------------------------------------------------------------------------*/
+/* -                                                     DROPMARKERS	                                                        -*/
+/* ------------------------------------------------------------------------------------------------------------------------------*/
+
+* .menulist-dropmarker { background: transparent !important;
+						 fill: var(--theme-checkbox-check) !important; }
+
+
+/* ------------------------------------------------------------------------------------------------------------------------------*/
+/* -                                                            BUTTONS                                                         -*/
+/* ------------------------------------------------------------------------------------------------------------------------------*/
+
+button.disco-cta-button,
+button.disco-cta-button.primary  { background: var(--theme-gradient-purple) !important;
+								   color: var(--theme-text-default) !important;
+								   border: 1px solid var(--theme-outline-selection-box-purple) !important;
+								   box-shadow: 0 0 1px var(--theme-outline-selection-box-shadow-purple) !important; border-radius: 0.3em !important; }
+										
+button.disco-cta-button:not([disabled="true"]):hover,
+button.disco-cta-button.primary:not([disabled="true"]):hover{ background: var(--theme-gradient-grey) !important;
+															  color: var(--theme-text-highlight) !important;
+															  border: 1px var(--theme-outline-selection-box-grey) solid !important;
+															  box-shadow: 0 0 1px var(--theme-outline-selection-box-shadow-grey) !important; }
+
+
+
+
+
+
+/* ------------------------------------------------------------------------------------------------------------------------------*/
+/* -                                                       DIALOGUES                                                            -*/
+/* ------------------------------------------------------------------------------------------------------------------------------*/
+
+.dialogBox { background: var(--theme-background) !important;
+			 border: 1px var(--theme-outline-selection-box-purple) solid !important;
+			 box-shadow: 0 0 1px var(--theme-outline-selection-box-shadow-purple) !important;
+			 }
+
+.dialogTitleBar { background-image: var(--theme-gradient-titlebar) !important; }
+
+/* NOTICE MESSAGE BAR */
+div.container { background: var(--theme-gradient-orange) !important;
+				 color: var(--theme-text-default) !important;
+				 font-family: var(--theme-font) !important; 
+				 font-size: var(--theme-font-size-14) !important;
+				 border: 1px var(--theme-outline-selection-box-purple) solid !important;
+				 box-shadow: 0 0 1px var(--theme-outline-selection-box-shadow-purple) !important;
+				 padding-top: 10px !important; padding-bottom: 10px !important;
+				}
+
+/* PRIVACY WARNING BOX */
+#contentBlockingOptionStandard.content-blocking-category.selected vbox.indent.default-content-blocking-ui vbox.content-blocking-extra-information vbox.content-blocking-warning.reload-tabs,
+#contentBlockingOptionStrict.content-blocking-category.selected vbox.indent vbox.content-blocking-extra-information vbox.content-blocking-warning.reload-tabs,
+#contentBlockingOptionStrict.content-blocking-category.selected vbox.indent vbox.content-blocking-extra-information vbox.content-blocking-warning,
+#contentBlockingOptionStrict.content-blocking-category.expanded vbox.indent vbox.content-blocking-extra-information vbox.content-blocking-warning,
+#contentBlockingOptionCustom.tracking-protection-ui.content-blocking-category.selected vbox.indent vbox.content-blocking-extra-information vbox.content-blocking-warning.reload-tabs,
+#contentBlockingOptionCustom.tracking-protection-ui.content-blocking-category.selected vbox.indent vbox.content-blocking-extra-information vbox.content-blocking-warning,
+#contentBlockingOptionCustom.tracking-protection-ui.content-blocking-category.expanded vbox.indent vbox.content-blocking-extra-information vbox.content-blocking-warning,
+#browserContainersExtensionContent.extension-controlled {	background: var(--theme-gradient-green) !important;
+															color: var(--theme-text-default) !important;
+															border: 1px var(--theme-outline-selection-box-grey) solid !important;
+															box-shadow: 0 0 1px var(--theme-outline-selection-box-shadow-grey) !important;
+															}
+
+
+#updateSettingsContainer.updateSettingCrossUserWarningContainer { background: var(--theme-gradient-cards-purple) !important;
+																  color: var(--theme-text-default) !important;
+																  border: 1px var(--theme-outline-selection-box-purple) solid !important;
+																  box-shadow: 0 0 1px var(--theme-outline-selection-box-shadow-purple) !important;
+																  }
+																  
+				
+				
+/* ------------------------------------------------------------------------------------------------------------------------------*/
+/* -                                                       MENULIST                                                             -*/
+/* ------------------------------------------------------------------------------------------------------------------------------*/
+xul|menulist > xul|menupopup { border: 1px var(--theme-outline-selection-box-purple) solid !important; box-shadow: 0 0 1px var(--theme-outline-selection-box-shadow-purple) !important; }
+xul|menulist > xul|menupopup > xul|menu:not([disabled="true"])[selected="true"], xul|menulist > xul|menupopup > xul|menuitem:not([disabled="true"])[selected="true"] { background: var(--theme-gradient-purple) !important; border: 1px var(--theme-outline-selection-box-purple) solid !important; box-shadow: 0 0 1px var(--theme-outline-selection-box-shadow-purple) !important; }
+xul|menulist > xul|menupopup > xul|menu:not([disabled="true"])[selected="true"], xul|menulist > xul|menupopup > xul|menuitem:not([disabled="true"]):hover { background: var(--theme-gradient-grey) !important; border: 1px var(--theme-outline-selection-box-purple) solid !important; box-shadow: 0 0 1px var(--theme-outline-selection-box-shadow-purple) !important; }
+
+
+/* ------------------------------------------------------------------------------------------------------------------------------*/
+/* -                                                        TABLES                                                              -*/
+/* ------------------------------------------------------------------------------------------------------------------------------*/
+
+/* This changes all treechildren elements highlights (list-like elements) */
+tree { background-color: var(--theme-background) !important;  }
+treechildren::-moz-tree-row { background-color: transparent !important; }
+treechildren::-moz-tree-image { fill: var(--theme-checkbox-check) !important }
+
+treechildren::-moz-tree-row(selected){ background: var(--theme-gradient-purple) !important;
+									   border: 1px var(--theme-outline-selection-box-purple) solid !important;
+									   box-shadow: 0 0 1px var(--theme-outline-selection-box-shadow-purple) !important;
+										}
+
+treechildren::-moz-tree-row(hover) { background: var(--theme-gradient-grey) !important;
+									 border: 1px var(--theme-outline-selection-box-purple) solid !important;
+									 box-shadow: 0 0 1px var(--theme-outline-selection-box-shadow-purple) !important;
+									}
+
+treecol { background: var(--theme-gradient-titlebar) !important; }
+
+textbox { background: var(--theme-background) !important;
+		  color: var(--theme-text-default) !important;
+		  border: 1px var(--theme-outline-selection-box-purple) solid !important;
+		  }
+
+}
+
+
+
+/* ------------------------------------------------------------------------------------------------------------------------------*/
+/* -                                                            CONTENT                                                         -*/
+/* ------------------------------------------------------------------------------------------------------------------------------*/
+
+/* DEFAULT FONT BOX */
+#defaultFont { border: 1px var(--theme-outline-selection-box-grey) solid !important; }
+
+/* FONT SIZE BOX */
+#defaultFontSize { border: 1px var(--theme-outline-selection-box-grey) solid !important; }
+
+/* DOWNLOADS BOX */
+#downloadFolder { border: 1px var(--theme-outline-selection-box-grey) solid !important; }
+
+/* APPLICATIONS BOX*/
+#filter { border: 1px var(--theme-outline-selection-box-purple) solid !important; }
+
+#applicationsGroup richlistbox#handlersView { border-left: 1px var(--theme-outline-selection-box-purple) solid !important;
+											  border-right: 1px var(--theme-outline-selection-box-purple) solid !important;
+											  border-bottom: 1px var(--theme-outline-selection-box-purple) solid !important;
+											  background: var(--theme-background-menu) !important;
+											  }
+
+#applicationsGroup listheader { border-top: 1px var(--theme-outline-selection-box-purple) solid !important;
+								border-left: 1px var(--theme-outline-selection-box-purple) solid !important;
+								border-right: 1px var(--theme-outline-selection-box-purple) solid !important;
+								}
+
+#applicationsGroup listheader treecol#typeColumn,
+#applicationsGroup listheader treecol#actionColumn { var(--theme-gradient-titlebar) !important; }
+
+#applicationsGroup richlistitem[selected="true"] { background: var(--theme-gradient-grey) !important;
+												   color: var(--theme-text-highlight) !important;
+												   border: 1px var(--theme-outline-selection-box-purple) solid !important;
+												   box-shadow: 0 0 1px var(--theme-outline-selection-box-shadow-purple) !important; }
+
+/* PRIVACY */
+#contentBlockingOptionStandard.content-blocking-category.selected vbox.indent.fallback-content-blocking-ui vbox.content-blocking-extra-information vbox.content-blocking-warning.reload-tabs,
+#contentBlockingOptionStandard.content-blocking-category,
+#contentBlockingOptionStrict.content-blocking-category,
+#contentBlockingOptionCustom.tracking-protection-ui.content-blocking-category { color: var(--theme-text-disabled) !important;
+																				background: var(--theme gradient-cards-grey) !important;
+																				border: 1px var(--theme-outline-selection-box-grey) solid !important;
+																				box-shadow: 0 0 1px var(--theme-outline-selection-box-shadow-grey) !important; }
+
+#contentBlockingOptionStandard.content-blocking-category.selected, 
+#contentBlockingOptionStrict.content-blocking-category.selected, 
+#contentBlockingOptionCustom.tracking-protection-ui.content-blocking-category.selected { background: var(--theme-gradient-cards-purple) !important; color: var(--theme-text-default) !important; border: 1px solid var(--theme-outline-selection-box-purple) !important; box-shadow: 0 0 1px var(--theme-outline-selection-box-shadow-purple) !important; }
+
+#contentBlockingOptionStandard.content-blocking-category vbox.indent.fallback-content-blocking-ui description,
+#contentBlockingOptionCustom.tracking-protection-ui.content-blocking-category.selected vbox.indent vbox.content-blocking-extra-information vbox.content-blocking-warning vbox.indent description.indent span.tail-with-learn-more,
+#contentBlockingOptionStrict.content-blocking-category.selected vbox.indent vbox.content-blocking-extra-information vbox.content-blocking-warning vbox.indent description.indent span.tail-with-learn-more,
+#contentBlockingOptionStandard.content-blocking-category.selected vbox.indent.fallback-content-blocking-ui description, 
+#contentBlockingOptionStrict.content-blocking-category vbox.indent label,
+#contentBlockingOptionCustom.tracking-protection-ui.content-blocking-category vbox.indent description#contentBlockingCustomDesc { color: var(--theme-text-shortcut-highlight) !important; }
+
+
+/* SYNC GROUP */
+.sync-group { background: var(--theme-gradient-cards-purple) !important;
+			  color: var(--theme-text-default) !important;
+			  border: 1px var(--theme-outline-selection-box-purple) solid !important;
+			  box-shadow: 0 0 1px var(--theme-outline-selection-box-shadow-purple) !important; }
+
+/* SEARCH ENGINE BOX*/
+#engineList { border: 1px var(--theme-outline-selection-box-purple) solid !important; }
+#engineList treechildren#engineChildren { background: var(--theme-background-menu) !important; }
+#engineShown { background: var(--theme-background-menu) !important; }
+#engineName, #engineKeyword { background: var(--theme-gradient-cards-purple) !important;  }
+
+
+

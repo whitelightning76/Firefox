@@ -1,0 +1,25 @@
+@namespace html "http://www.w3.org/1999/xhtml";
+@namespace xul "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul";
+
+/* ------------------------------------------------------------------------------------------------------------------------------*/
+/* -                                                   ABOOUT:PROTECTION                                                        -*/
+/* ------------------------------------------------------------------------------------------------------------------------------*/
+
+@-moz-document url-prefix(about:robots) {  
+
+.button-container > button {  -moz-appearance: none !important; 
+							 background: var(--theme-gradient-purple) !important;
+							 color: var(--theme-text-default) !important;
+							 border: 1px solid var(--theme-outline-selection-box-purple) !important;
+							 box-shadow: 0 0 1px var(--theme-outline-selection-box-shadow-purple) !important;
+							 border-radius: 0.3em !important; }
+
+.button-container > button:hover { background: var(--theme-gradient-grey) !important;
+								   color: var(--theme-text-highlight) !important;
+								   border: 1px var(--theme-outline-selection-box-grey) solid !important;
+								   box-shadow: 0 0 1px var(--theme-outline-selection-box-shadow-grey) !important; }
+
+
+
+}
+

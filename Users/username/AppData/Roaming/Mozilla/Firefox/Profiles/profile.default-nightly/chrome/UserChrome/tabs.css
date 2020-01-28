@@ -1,0 +1,49 @@
+/* ------------------------------------------------------------------------------------------------------------------------------*/
+/* -                                                         TABS                                                               -*/
+/* ------------------------------------------------------------------------------------------------------------------------------*/
+
+:root * { --tab-line-color: var(--theme-tabline) !important;
+		   --tab-loading-fill: var(--theme-tabline) !important; }
+
+/* Remove blank space before and after tabs */
+.titlebar-spacer[type="pre-tabs"], .titlebar-spacer[type="post-tabs"] { display: none !important; }
+
+/* default tab */
+.tabbrowser-tab { font-size: 15px !important; }
+
+/* active tab */
+.tabbrowser-tab[selected="true"] { font-size: 15px !important;
+								   color: var(--theme-text-highlight) !important; }
+
+/* inactive tabs */
+.tabbrowser-tab:-moz-window-inactive { color: var(--theme-outline-menu) !important; }
+.tabbrowser-tab:-moz-window-inactive:hover { color: var(--theme-text-shortcut-highlight) !important; }
+.tabbrowser-tab[selected="true"]:-moz-window-inactive { color: var(--theme-text-default) !important; }
+
+/* all other tabs */
+.tabbrowser-tab:not([selected]) { filter: grayscale(40%) !important;
+								  opacity: 0.90 !important;
+								  color: var(--theme-text-notselected) !important; }
+
+.tabbrowser-tab:not([selected]):hover {	filter: grayscale(25%) !important;
+										opacity: 1.0 !important;
+										color: var(--theme-text-notselected) !important;
+										filter: brightness(125%) !important; }
+
+
+
+
+			
+/* unloaded tabs */
+.tabbrowser-tab[pending="true"] .tab-text { color: #ff0000 !important;
+											filter: brightness(100%) !important; }
+											
+.tabbrowser-tab[pending="true"] .tab-text:hover { filter: brightness(80%) !important; }
+
+/* inactive window tabs  */
+.tabbrowser-tab:-moz-window-inactive:hover { color: var(--theme-background) !important; }
+.tabbrowser-tab[selected="true"]:-moz-window-inactive:hover { color: var(--theme-text-highlight) !important; }
+
+
+
+

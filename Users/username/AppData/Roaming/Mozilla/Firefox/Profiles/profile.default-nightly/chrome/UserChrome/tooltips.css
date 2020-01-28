@@ -1,0 +1,21 @@
+@namespace html "http://www.w3.org/1999/xhtml";
+@namespace xul "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul";
+
+/* ------------------------------------------------------------------------------------------------------------------------------*/
+/* -                                                       Tooltips                                                             -*/
+/* ------------------------------------------------------------------------------------------------------------------------------*/
+
+
+tooltip {-moz-appearance: none !important;
+		 padding: 5px!important;
+		 margin: 5x !important;
+		 max-width: 40em !important;
+		 background-color: var(--theme-background) !important;
+		 color: var(--theme-text-highlight) !important;		 
+		 border: 1px solid var(--theme-outline-orange) !important; 
+		 font-family: var(--theme-font) !important;
+		 font-size: 15px !important;
+		}	
+
+
+

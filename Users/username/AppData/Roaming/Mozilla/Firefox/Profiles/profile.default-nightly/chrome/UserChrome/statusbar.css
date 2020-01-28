@@ -1,0 +1,18 @@
+/* ------------------------------------------------------------------------------------------------------------------------------*/
+/* -                                                     STATUS BAR                                                             -*/
+/* ------------------------------------------------------------------------------------------------------------------------------*/
+
+/* place the statusbar in the urlbar */
+#urlbar .urlbar-input-box { display: -moz-stack !important; }
+#urlbar .urlbar-input-box::after {	z-index: 2 !important; content: "" !important; width: 100% !important; height: 100% !important; pointer-events:none !important; background-position: left 2px !important; background-repeat: no-repeat !important; background-image: -moz-element(#statuspanel) !important; }
+#urlbar:hover .urlbar-input-box::after, #urlbar[focused] .urlbar-input-box::after {	visibility: hidden !important; background-image: none !important; }
+:root[uidensity="compact"]:-moz-lwtheme-brighttext #urlbar .urlbar-input-box::after{ background-position-y: 0px !important; }
+:root[uidensity="touch"]:-moz-lwtheme-brighttext #urlbar .urlbar-input-box::after{ background-position-y: 3px !important; }
+#urlbar .urlbar-input-box::after{ display: -moz-box !important; }
+#statuspanel-label { direction: ltr !important; }
+#statuspanel-inner > #statuspanel-label { height:4em !important; min-width: 1050px !important; border: none !important; margin-top: 0px !important; margin-right: 0px !important; font-size: 17px !important; font-family: var(--theme-font) !important;  }
+#statuspanel{ z-index: -1 !important; }
+#statuspanel-inner > #statuspanel-label { background: var(--theme-background) !important; color: inherit !important; }
+#statuspanel-inner{ background: var(--theme-background) !important; }
+#statuspanel{ color: var(--theme-text-highlight) !important; }
+#statuspanel[type="status"] { color: var(--theme-text-highlight) !important; }

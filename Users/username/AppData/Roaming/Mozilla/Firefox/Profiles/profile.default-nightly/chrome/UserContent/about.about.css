@@ -1,0 +1,48 @@
+@namespace html "http://www.w3.org/1999/xhtml";
+@namespace xul "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul";
+
+/* ------------------------------------------------------------------------------------------------------------------------------*/
+/* -                                                     ABOUT:ABOUT                                                            -*/
+/* ------------------------------------------------------------------------------------------------------------------------------*/
+
+@-moz-document url-prefix(aboutTabCrashed) {
+
+html body div.container { background: var(--theme-gradient-cards-purple) !important;
+						  color: var(--theme-text-default) !important;
+						  border: 1px solid var(--theme-outline-selection-box-purple) !important;
+						  box-shadow: 0 0 1px var(--theme-outline-selection-box-shadow-purple) !important;
+						  border-radius: 0.3em !important;
+						  padding: 25px !important; }
+
+body div.container h1 { color: var(--theme-text-highlight) !important; text-align: center !important; }
+
+
+
+body div.container ul#abouts.columns li a { color: var(--theme-text-default) !important; }
+body div.container ul#abouts.columns li a:hover { color: var(--theme-text-highlight) !important; filter: brightness(125%) !important; text-decoration: underline !important; } 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+

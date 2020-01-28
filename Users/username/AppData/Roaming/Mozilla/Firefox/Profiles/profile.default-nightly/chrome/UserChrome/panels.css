@@ -1,0 +1,383 @@
+/* ------------------------------------------------------------------------------------------------------------------------------*/
+/* -                                                 DEFAULT PANELS 	                                                        -*/
+/* ------------------------------------------------------------------------------------------------------------------------------*/
+
+@namespace html "http://www.w3.org/1999/xhtml";
+@namespace xul "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul";
+
+@-moz-document regexp("chrome:\/\/(?!devtools).*"), regexp("about:(?!(blank|devtools)).*") { 
+
+dialog, window, wizard { background: var(--theme-background) !important;
+color: var(--theme-text-default) !important; }
+
+button:not([disabled="true"]) { -moz-appearance: none !important;
+								padding: 3px !important;
+								background: var(--theme-gradient-purple) !important;
+								color: var(--theme-text-default) !important;
+								border: 1px solid var(--theme-outline-selection-box-purple) !important;
+								box-shadow: 0 0 1px var(--theme-outline-selection-box-shadow-purple) !important;
+								border-radius: 0.3em !important;
+								cursor: default !important;
+								transition: none !important;
+								opacity: 1 !important; }
+
+button[label="Cancel"]:not([disabled="true"]) { -moz-appearance: none !important;
+												padding: 3px !important;
+												background: var(--theme-gradient-red) !important;
+												color: var(--theme-text-default) !important;
+												border: 1px solid var(--theme-outline-selection-box-purple) !important;
+												box-shadow: 0 0 1px var(--theme-outline-selection-box-shadow-purple) !important;
+												border-radius: 0.3em !important;
+												cursor: default !important;
+												transition: none !important;
+												opacity: 1 !important; }
+
+
+
+			   
+button:not([disabled="true"]):hover { background: var(--theme-gradient-grey) !important;
+									  color: var(--theme-text-highlight) !important;
+									  border: 1px var(--theme-outline-selection-box-grey) solid !important;
+									  box-shadow: 0 0 1px var(--theme-outline-selection-box-shadow-grey) !important; }
+
+
+
+button[label="Cancel"]:not([disabled="true"]):hover { background: var(--theme-gradient-orange) !important;
+													  color: var(--theme-text-highlight) !important;
+													  border: 1px var(--theme-outline-selection-box-grey) solid !important;
+													  box-shadow: 0 0 1px var(--theme-outline-selection-box-shadow-grey) !important; }
+
+
+}
+
+
+
+
+		  
+
+
+
+/* ------------------------------------------------------------------------------------------------------------------------------*/
+/* -                                                          PANELS                                                            -*/
+/* ------------------------------------------------------------------------------------------------------------------------------*/
+ 
+:root {
+    --space-above-tabbar: 0px !important;
+    --tabs-navbar-shadow-size: 0px !important;
+}
+
+
+
+.panel-arrowcontainer > .panel-arrowcontent { -moz-appearance: none !important; /* main panel */
+													color: var(--theme-text-default) !important;
+													background: var(--theme-background) !important;
+													font-size: 14px !important;
+													font-family: var(--theme-font) !important;
+													border: 1.5px solid var(--theme-outline-selection-box-purple) !important;
+													box-shadow: 0 0 0.5px var(--theme-outline-selection-box-shadow-purple) !important;
+													border-radius: 1em !important;
+													padding-top: 1px !important;
+													padding-bottom: 1px !important; }
+
+.panel-arrow { padding-top: 10px !important; fill: var(--theme-outline-selection-box-purple) !important; } /* fix top arrow of panel  */
+
+.panel-header,
+#protections-popup-mainView-panel-header { background: radial-gradient(circle at top right,#4d4d80, #262640) !important;!important; } /* panel header */
+
+.panel-footer > button:not([disabled]),
+.panel-footer > button:not([disabled])[default] { color: var(--theme-text-default) !important; /* footer button */
+												  background: var(--theme-gradient-purple) !important; 
+												  border: 1px solid var(--theme-outline-button-purple) !important;
+												  border-radius: 0.3em !important; }
+
+.panel-footer > button:not([disabled])[default]:hover { background: var(--theme-gradient-grey) !important; 
+														color: var(--theme-text-highlight) !important;
+														filter: brightness(125%) !important;
+														border: 1px var(--theme-outline-selection-box-grey) solid !important;
+														box-shadow: 0 0 1px var(--theme-outline-selection-box-shadow-grey) !important; }
+
+.panel-footer > button:not([disabled]):hover { background: var(--theme-gradient-red) !important;
+											   color: var(--theme-text-highlight) !important;
+											   filter: brightness(125%) !important;
+											   border: 1.5px var(--theme-outline-selection-box-grey) solid !important;
+											   box-shadow: 0 0 0.5px var(--theme-outline-selection-box-shadow-grey) !important; }
+
+.panel-subview-footer,
+#downloadsHistory.downloadsPanelFooterButton { background: var(--theme-gradient-purple) !important; /* download footer panel */
+											   border: 1px solid var(--theme-outline-button-purple) !important;
+											   border-radius: 0.3em !important; }
+
+:root .panel-subview-footer:hover,
+#downloadsHistory.downloadsPanelFooterButton:hover { background: var(--theme-gradient-purple-active) !important; 
+													 color: var(--theme-text-highlight) !important;
+													 filter: brightness(125%) !important;
+													 border: 1px var(--theme-outline-selection-box-purple) solid !important;
+													 box-shadow: 0 0 1px var(--theme-outline-selection-box-shadow-purple) !important; }
+																				   
+.PanelUI-subView vbox.panel-subview-body toolbarbutton { border: 1.5px solid transparent !important;
+														 box-shadow: 0 0 0.5px transparent !important; }
+																											  
+.PanelUI-subView vbox.panel-subview-body toolbarbutton:not([disabled]):hover { background: var(--theme-gradient-grey) !important;
+																			   color: var(--theme-text-highlight) !important;
+																			   filter: brightness(125%) !important;
+																			   border: 1.5px solid var(--theme-outline-button-purple) !important;
+																			   box-shadow: 0 0 0.5px var(--theme-outline-selection-box-shadow-purple) !important;
+																			   border-radius: 0.3em !important; }
+
+.subviewbutton { border-left: none !important;
+				 border-right: none !important;
+				 border-top: 1.5px solid var(--theme-background) !important;
+				 border-bottom: 1.5px solid var(--theme-background) !important;
+				 border-radius: none !important;
+				 filter: none !important; }
+
+.subviewbutton:hover { background: var(--theme-gradient-grey) !important; /* hover panel entry */
+					   color: var(--theme-text-highlight) !important;
+					   filter: brightness(125%) !important;
+					   border-left: none !important;
+					   border-right: none !important;
+					   border-top: 1.5px solid var(--theme-outline-selection-box-purple) !important;
+					   border-bottom: 1.5px solid var(--theme-outline-selection-box-purple) !important;
+					   border-radius: 0.3em !important; }
+
+.text-link { color: var(--theme-text-default) !important; }
+.text-link:hover,text-link:active { color: var(--theme-text-highlight) !important; filter: brightness(125%) !important; text-decoration: underline !important; }
+
+
+/* tracking protection panel */
+#protections-popup-tp-switch-section.protections-popup-section { background: var(--theme-background) !important; }
+.protections-popup-tp-switch[enabled] { background-color: var(--theme-checkbox-check) !important; border: 1px solid var(--theme-checkbox-check) !important; }
+
+.protections-popup-category,
+#protections-popup-settings-button,
+#protections-popup-show-report-button.protections-popup-footer-button  { background: var(--theme-background) !important;
+																									   color: var(--theme-text-default) !important;
+																									   border: 1px solid transparent !important;
+																									   box-shadow: 0 0 0.5px transparent !important;
+																									   border-radius: 0.3em !important; }
+
+.protections-popup-category:hover,
+#protections-popup-settings-button:hover,
+#protections-popup-show-report-button.protections-popup-footer-button:hover { background: var(--theme-gradient-grey) !important;
+																											border: 1px solid var(--theme-outline-button-purple) !important;
+																											box-shadow: 0 0 0.5px var(--theme-outline-selection-box-shadow-purple) !important;
+																											border-radius: 0.3em !important;
+																											color: var(--theme-text-highlight) !important;
+																											filter: brightness(125%) !important; }
+
+#protections-popup-cookiesView-list.protections-popup-list vbox label.protections-popup-cookiesView-list-header { color: var(--theme-text-highlight) !important; filter: brightness(125%) !important; }
+
+#protections-popup-tp-switch-breakage-link.text-link,
+#protections-popup-siteNotWorkingView-sendReport.text-link,
+#protections-popup-not-blocking-section-why.text-link { color: var(--theme-text-default) !important; text-decoration: underline !important; }
+
+#protections-popup-tp-switch-breakage-link.text-link:hover,
+#protections-popup-siteNotWorkingView-sendReport.text-link:hover,
+#protections-popup-not-blocking-section-why.text-link:hover { color: var(--theme-text-highlight) !important; }
+
+#protections-popup-trackers-blocked-counter-description { color: var(--theme-text-default) !important;
+																						text-decoration: underline !important; }
+
+#protections-popup-trackers-blocked-counter-description:hover { color: var(--theme-text-highlight) !important; }
+
+#protections-popup-socialblockView-settings-button,
+#protections-popup-trackersView-settings-button,
+#protections-popup-cookiesView-settings-button { background: var(--theme-gradient-purple) !important;
+																			   color: var(--theme-text-default) !important;
+																			   border: 1px solid var(--theme-outline-button-purple) !important; }
+
+#protections-popup-socialblockView-settings-button:hover,										 
+#protections-popup-trackersView-settings-button:hover,
+#protections-popup-cookiesView-settings-button:hover { background: var(--theme-gradient-purple-active) !important;
+																					 color: var(--theme-text-highlight) !important;
+																					 filter: brightness(125%) !important;
+																					 border: 1px var(--theme-outline-selection-box-purple) solid !important;
+																					 box-shadow: 0 0 1px var(--theme-outline-selection-box-shadow-purple) !important; }
+
+.notFound,
+.notFound:hover { background: var(--theme-background) !important;
+												color: var(--theme-text-notselected) !important;
+												filter: none !important;
+												border: 1px transparent solid !important;
+												box-shadow: 0 0 1px transparent !important; }
+
+
+
+/* site information panel */
+#identity-popup-clear-sitedata-button,
+#identity-popup-more-info { background: var(--theme-gradient-purple) !important;
+														  color: var(--theme-text-default) !important;
+														  fill: var(--theme-text-default) !important;
+														  border: 1px solid var(--theme-outline-button-purple) !important; }
+
+#identity-popup-clear-sitedata-button:hover,
+#identity-popup-more-info:hover { background: var(--theme-gradient-purple-active) !important;
+																color: var(--theme-text-highlight) !important;
+																fill: var(--theme-text-highlight) !important;
+																filter: brightness(125%) !important;
+																border: 1px var(--theme-outline-selection-box-purple) solid !important;
+																box-shadow: 0 0 1px var(--theme-outline-selection-box-shadow-purple) !important; }
+
+/* create bookmark panel */
+#editBookmarkPanel menulist { padding: 4px !important; }
+#editBookmarkPanel button { padding: 3px !important; }
+#editBookmarkPanel button:hover { filter: brightness(150%) }
+
+#editBookmarkPanel textbox,
+#editBookmarkPanel menulist,
+#editBookmarkPanel button,
+#editBookmarkPanel tree,
+#editBookmarkPanel richlistbox { -moz-appearance: none !important;
+															   font-size: 16px !important;
+															   background: var(--theme-background) !important;
+															   color: var(--theme-text-default) !important; }
+
+#editBMPanel_folderTree treechildren::-moz-tree-cell(selected) { background: var(--theme-gradient-purple) !important;
+																							   color: var(--theme-text-highlight) !important;
+																							   fill: var(--theme-text-highlight) !important;
+																							   filter: brightness(125%) !important;
+																							   border: 1px var(--theme-outline-selection-box-purple) solid !important;
+																							   box-shadow: 0 0 1px var(--theme-outline-selection-box-shadow-purple) !important; }
+
+#editBMPanel_folderTree treechildren::-moz-tree-cell(hover) { background: var(--theme-gradient-grey) !important;
+																						    color: var(--theme-text-highlight) !important;
+																						    fill: var(--theme-text-highlight) !important;
+																						    filter: brightness(125%) !important;
+																						    border: 1px var(--theme-outline-selection-box-grey) solid !important;
+																						    box-shadow: 0 0 1px var(--theme-outline-selection-box-shadow-grey) !important; }
+																						   
+#editBookmarkPanelDoneButton.editBookmarkPanelBottomButton { background: var(--theme-gradient-purple) !important;
+																						   color: var(--theme-text-default) !important;
+																						   fill: var(--theme-text-default) !important;
+																						   border: 1px solid var(--theme-outline-button-purple) !important;
+																						   border-radius: 0.3em !important;
+																						   margin: 4px !important; }
+
+#editBookmarkPanelDoneButton.editBookmarkPanelBottomButton:hover { background: var(--theme-gradient-purple-active) !important;
+																								 color: var(--theme-text-highlight) !important;
+																								 fill: var(--theme-text-highlight) !important;
+																								 filter: brightness(125%) !important;
+																								 border: 1px var(--theme-outline-selection-box-purple) solid !important;
+																								 box-shadow: 0 0 1px var(--theme-outline-selection-box-shadow-purple) !important; }
+																								 
+#editBookmarkPanelRemoveButton.editBookmarkPanelBottomButton { background: var(--theme-gradient-grey) !important;
+																							 color: var(--theme-text-default) !important;
+																							 fill: var(--theme-text-default) !important;
+																							 border: 1px var(--theme-outline-selection-box-grey) solid !important;
+																							 box-shadow: 0 0 1px var(--theme-outline-selection-box-shadow-grey) !important;
+																							 border-radius: 0.3em !important;
+																							 margin: 4px !important; }
+
+#editBookmarkPanelRemoveButton.editBookmarkPanelBottomButton:hover { background: var(--theme-gradient-red) !important;
+																								   color: var(--theme-text-highlight) !important;
+																								   fill: var(--theme-text-highlight) !important;
+																								   filter: brightness(125%) !important;
+																								   border: 1px var(--theme-outline-selection-box-red) solid !important;
+																								   box-shadow: 0 0 1px var(--theme-outline-selection-box-shadow-red) !important; }
+
+/* download panel */
+#downloadsListBox richlistitem.download-state hbox.downloadMainArea { border: 1.5px solid transparent !important; box-shadow: 0 0 0.5px transparent !important; }
+ 
+#downloadsListBox richlistitem.download-state hbox.downloadMainArea:hover { background: var(--theme-gradient-grey) !important;
+																			border: 1.5px solid var(--theme-outline-button-purple) !important;
+																			box-shadow: 0 0 0.5px var(--theme-outline-selection-box-shadow-purple) !important; }
+ 
+#downloadsListBox richlistitem.download-state button.downloadButton.downloadIconShow { fill: var(--theme-folder-icon) !important; }
+#downloadsListBox richlistitem.download-state button.downloadButton.downloadIconRetry { fill: var(--theme-reload-icon) !important; }
+#downloadsListBox richlistitem.download-state button.downloadButton.downloadIconCancel { fill: var(--theme-stop-icon) !important; }
+
+
+
+/* library panel */
+#appMenu-library-downloads-show-button.subviewbutton.subviewbutton-iconic:hover { background: var(--theme-gradient-grey) !important; /*show all downloads button */
+																												color: var(--theme-text-highlight) !important;
+																												filter: brightness(125%) !important;
+																												border-radius: 0.3em !important;
+																												border: 1.5px solid var(--theme-outline-button-purple) !important;
+																												box-shadow: 0 0 0.5px var(--theme-outline-selection-box-shadow-purple) !important; }
+
+#panelMenu_downloadsMenu hbox.subviewbutton.subviewbutton-iconic.download.download-state.navigable { background: var(--theme-background) !important; /* download list */
+																																   color: var(--theme-text-default) !important;
+																																   border: 1px solid var(--theme-background) !important;
+																																   box-shadow: 0 0 0.5px transparent !important;
+																																   border-radius: 0.3em !important; }												
+
+#panelMenu_downloadsMenu hbox.subviewbutton.subviewbutton-iconic.download.download-state.navigable:hover { background: var(--theme-gradient-grey) !important; /* download list hover */
+																																		 color: var(--theme-text-highlight) !important;
+																																		 filter: brightness(125%) !important;
+																																		 border: 1.5px solid var(--theme-outline-button-purple) !important;
+																																		 box-shadow: 0 0 0.5px var(--theme-outline-selection-box-shadow-purple) !important; }
+
+/* overflow panel */
+#overflowMenu-customize-button { display: none !important; } /* Overflow menu, Hides "Customize Toolbar..." button */
+
+#widget-overflow-mainView toolbarbutton { background: var(--theme-background) !important; /* overflow list */
+																		color: var(--theme-text-default) !important;
+																		border: 1px solid var(--theme-background) !important;
+																		box-shadow: 0 0 0.5px transparent !important;
+																		border-radius: 0.3em !important; }
+
+#widget-overflow-mainView toolbarbutton:hover { background: var(--theme-gradient-grey) !important; /* hover overflow list */
+																			  color: var(--theme-text-highlight) !important;
+																			  filter: brightness(125%) !important;
+																			  border: 1.5px solid var(--theme-outline-button-purple) !important;
+																			  box-shadow: 0 0 0.5px var(--theme-outline-selection-box-shadow-purple) !important; }
+
+
+/* hamburger panel */
+#appMenu-mainView.PanelUI-subView vbox.panel-subview-body toolbarseparator { fill: var(--theme-background) !important; margin: 1px 8px 4px 1px !important; } /* seperators */
+
+.subviewbutton[shortcut]::after { color: var(--theme-text-shortcut-highlight) !important; } /* hamburger menu Text after links */
+.subviewbutton-nav::after { color: var(--theme-text-shortcut-highlight) !important; }
+
+
+
+
+
+
+
+
+
+
+
+
+/* ------------------------------------------------------------------------------------------------------------------------------*/
+/* -                                                 CUSTOMIZE TOOLBAR	                                                        -*/
+/* ------------------------------------------------------------------------------------------------------------------------------*/
+
+#customization-panelHolder { background: var(--theme-gradient-cards-purple) !important;
+							 color: var(--theme-text-highlight) !important;
+							 border-radius: 0.3em !important; }
+
+.customization-uidensity-menuitem[active="true"],
+.customization-uidensity-menuitem:active,	
+.customization-lwtheme-menu-theme[active="true"],
+.customization-lwtheme-menu-theme:active { background: var(--theme-gradient-purple) !important;
+										   border: 1px var(--theme-outline-selection-box-purple) solid !important;
+										   box-shadow: 0 0 1px var(--theme-outline-selection-box-shadow-purple) !important; }
+
+.customization-uidensity-menuitem:hover,	
+.customization-lwtheme-menu-theme:hover { background: var(--theme-gradient-grey) !important;
+										  border: 1px var(--theme-outline-selection-box-purple) solid !important;
+										  box-shadow: 0 0 1px var(--theme-outline-selection-box-shadow-purple) !important; }
+	
+	
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+

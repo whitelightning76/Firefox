@@ -1,0 +1,13 @@
+@namespace html "http://www.w3.org/1999/xhtml";
+@namespace xul "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul";
+
+/* ------------------------------------------------------------------------------------------------------------------------------*/
+/* -                                                          TEXTLINKS                                                         -*/
+/* ------------------------------------------------------------------------------------------------------------------------------*/
+
+@-moz-document url-prefix(about:preferences), url-prefix(about:addons), url-prefix(chrome://mozapps/content/extensions/) {
+	
+html|a, .text-link { color: var(--theme-text-default) !important; text-decoration: underline !important; }
+html|a:hover, .text-link:hover, .text-link:active { color: var(--theme-text-highlight) !important; filter: brightness(150%) !important; }
+
+}

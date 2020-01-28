@@ -1,0 +1,44 @@
+@namespace html "http://www.w3.org/1999/xhtml";
+@namespace xul "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul";
+
+@-moz-document  url-prefix(about:addons), url-prefix(about:preferences), url-prefix(chrome://mozapps/content/extensions/) {
+
+/* ------------------------------------------------------------------------------------------------------------------------------*/
+/* -                                                          TWEAKS                                                            -*/
+/* ------------------------------------------------------------------------------------------------------------------------------*/
+
+/* Fix double close button in dialogues  
+:root .close-icon:hover { fill-opacity: 0 !important; }
+*/
+
+/* REMOVE NOTICE FROM ADDONS SCREEN 
+div.container { display: none !important; }
+*/
+
+/* REMOVE TEXT SECTION ABOVE ADDONS 
+#main div discovery-pane header p span { display: none !important; }
+*/
+
+/* REMOVE PRIVACY POLICY LINK 
+#main div discovery-pane footer.view-footer div.view-footer-item a.privacy-policy-link,
+#main div recommended-extensions-section footer.view-footer.hide-amo-link div.view-footer-item a.privacy-policy-link { display: none !important; }
+*/
+
+/* REMOVE RECOMMENDED SECTION IN ADDONS 
+#main div recommended-extensions-section { display:none !important;  } 
+*/
+																									
+/* REMOVE RECOMMENDED SECTION IN THEMES 
+#main div recommended-themes-section { display:none !important;  }
+*/
+
+/* search to the right, options to the left 
+#header-inner {margin: 12px 0px -40px 4px !important}
+#heading {margin: 11px 0px 1px -4px !important}
+#main {margin-top: 30px}
+.more-options-button {top: 8px}
+#search-label, #category-discover, #heading-name, .list-section-heading, recommended-extensions-section { display:none }
+*/
+}
+
+

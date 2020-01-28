@@ -1,0 +1,43 @@
+@namespace html "http://www.w3.org/1999/xhtml";
+@namespace xul "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul";
+
+/* ------------------------------------------------------------------------------------------------------------------------------*/
+/* -                                                   ABOOUT:PROTECTION                                                        -*/
+/* ------------------------------------------------------------------------------------------------------------------------------*/
+
+@-moz-document url-prefix(about:protection) {  
+
+#sign-up-for-monitor-link {  -moz-appearance: none !important; 
+							 background: var(--theme-gradient-purple) !important;
+							 color: var(--theme-text-default) !important;
+							 border: 1px solid var(--theme-outline-selection-box-purple) !important;
+							 box-shadow: 0 0 1px var(--theme-outline-selection-box-shadow-purple) !important;
+							 border-radius: 0.3em !important; }
+
+#sign-up-for-monitor-link:not([disabled="true"]):hover { background: var(--theme-gradient-grey) !important;
+														 color: var(--theme-text-highlight) !important;
+														 border: 1px var(--theme-outline-selection-box-grey) solid !important;
+														 box-shadow: 0 0 1px var(--theme-outline-selection-box-shadow-grey) !important; }
+
+#open-about-logins-button.primary {  -moz-appearance: none !important; 
+									background: var(--theme-gradient-purple) !important;
+									color: var(--theme-text-default) !important;
+									border: 1px solid var(--theme-outline-selection-box-purple) !important;
+									box-shadow: 0 0 1px var(--theme-outline-selection-box-shadow-purple) !important; border-radius: 0.3em !important; }
+
+#open-about-logins-button.primary:not([disabled="true"]):hover { background: var(--theme-gradient-grey) !important;
+																 color: var(--theme-text-highlight) !important;
+																 border: 1px var(--theme-outline-selection-box-grey) solid !important;
+																 box-shadow: 0 0 1px var(--theme-outline-selection-box-shadow-grey) !important;  }
+
+#social-link,
+#lockwise-how-it-works,
+#manage-devices {  -moz-appearance: none !important;
+				   color: var(--theme-text-default) !important; }
+
+#social-link:hover:active,
+#lockwise-how-it-works:hover:active,
+#manage-devices:hover:active { color: var(--theme-text-highlight) !important; filter: brightness(125%) !important; text-decoration: underline !important; }
+
+}
+

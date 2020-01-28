@@ -1,0 +1,187 @@
+@namespace html "http://www.w3.org/1999/xhtml";
+@namespace xul "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul";
+
+/* ------------------------------------------------------------------------------------------------------------------------------*/
+/* -                                                     ABOUT:ADDONS                                                           -*/
+/* ------------------------------------------------------------------------------------------------------------------------------*/
+
+@-moz-document url-prefix(about:addons), url-prefix(chrome://mozapps/content/extensions/) {
+
+/* ------------------------------------------------------------------------------------------------------------------------------*/
+/* -                                                      SCROLLBAR     	                                                    -*/
+/* ------------------------------------------------------------------------------------------------------------------------------*/	
+
+/*
+* { scrollbar-color: var(--theme-scrollbar-thumb) var(--theme-scrollbar-background) !important; scrollbar-width: thin !important; }
+*/
+
+/* ------------------------------------------------------------------------------------------------------------------------------*/
+/* -                                                      CHECKBOXES    	                                                    -*/
+/* ------------------------------------------------------------------------------------------------------------------------------*/	
+
+* .checkbox-icon { background: transparent !important; }
+* .checkbox-check { fill: var(--theme-checkbox-check) !important; }
+
+
+/* ------------------------------------------------------------------------------------------------------------------------------*/
+/* -                                                        RADIO	                                                            -*/
+/* ------------------------------------------------------------------------------------------------------------------------------*/
+
+*.radio-check { fill: var(--theme-checkbox-check) !important; }
+
+
+/* ------------------------------------------------------------------------------------------------------------------------------*/
+/* -                                                     DROPMARKERS	                                                        -*/
+/* ------------------------------------------------------------------------------------------------------------------------------*/
+
+* .menulist-dropmarker { background: transparent !important;
+						 fill: var(--theme-checkbox-check) !important; }
+
+
+/* ------------------------------------------------------------------------------------------------------------------------------*/
+/* -                                                            BUTTONS                                                         -*/
+/* ------------------------------------------------------------------------------------------------------------------------------*/
+
+button.disco-cta-button,
+button.disco-cta-button.primary  { background: var(--theme-gradient-purple) !important;
+								   color: var(--theme-text-default) !important;
+								   border: 1px solid var(--theme-outline-selection-box-purple) !important;
+								   box-shadow: 0 0 1px var(--theme-outline-selection-box-shadow-purple) !important; border-radius: 0.3em !important; }
+										
+button.disco-cta-button:not([disabled="true"]):hover,
+button.disco-cta-button.primary:not([disabled="true"]):hover{ background: var(--theme-gradient-grey) !important;
+															  color: var(--theme-text-highlight) !important;
+															  border: 1px var(--theme-outline-selection-box-grey) solid !important;
+															  box-shadow: 0 0 1px var(--theme-outline-selection-box-shadow-grey) !important; }
+															  
+
+/* ------------------------------------------------------------------------------------------------------------------------------*/
+/* -                                                        CARDS	                                                            -*/
+/* ------------------------------------------------------------------------------------------------------------------------------*/
+
+/* ENABLED CARD */
+#main div addon-list section > addon-card > .card {	color: var(--theme-text-highlight) !important;
+													background: var(--theme-gradient-cards-purple) !important;
+													border: 1px var(--theme-outline-selection-box-purple) solid !important;
+													box-shadow: 0 0 1px var(--theme-outline-selection-box-shadow-purple) !important; }
+
+/* HOVER ENABLED CARD */
+#main div addon-list section > addon-card > .card:hover {	color: var(--theme-text-highlight) !important;
+															background: var(--theme-gradient-cards-purple-active) !important;
+															border: 1px var(--theme-outline-selection-box-purple) solid !important;
+															box-shadow: 0 0 1px var(--theme-outline-selection-box-shadow-purple) !important; }
+													
+/* DISABLED CARD */					
+#main div addon-list > section + section > addon-card > .card {	color: var(--theme-text-disabled) !important;
+																background: var(--theme-gradient-cards-grey) !important;
+																border: 1px var(--theme-outline-selection-box-grey) solid !important;
+																box-shadow: 0 0 1px var(--theme-outline-selection-box-shadow-grey) !important; }
+
+/* HOVER DISABLED CARD */					
+#main div addon-list > section + section > addon-card > .card:hover {	color: var(--theme-text-disabled) !important;
+																		background: var(--theme-gradient-cards-grey-active) !important;
+																		border: 1px var(--theme-outline-selection-box-grey) solid !important;
+																		box-shadow: 0 0 1px var(--theme-outline-selection-box-shadow-grey) !important; }
+																
+/* RECOMMENDED CARD */
+#main div discovery-pane recommended-addon-list recommended-addon-card div.card.addon,
+#main div recommended-extensions-section recommended-addon-list recommended-addon-card div.card.addon,
+#main div recommended-themes-section recommended-addon-list recommended-addon-card div.card.addon { color: var(--theme-text-default) !important;
+																									background: var(--theme-gradient-cards-grey) !important;
+																									border: 1px var(--theme-outline-selection-box-grey) solid !important;
+																									box-shadow: 0 0 1px var(--theme-outline-selection-box-shadow-grey) !important; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@-moz-document url-prefix("chrome://mozapps/content/extensions/aboutaddons.html"){ /* multi column */
+  
+  :root{  overflow-x: hidden } /* Remove this if it causes horizontal scrolling problems */
+  
+  @media (min-width:720px){
+    #main{ max-width: unset !important; padding-right: 28px; }
+    addon-list > section,
+    recommended-addon-list{
+      padding: 1em;
+      display: grid;
+      grid-template-areas: "hd hd" "cd cd";
+      grid-template-columns: 1fr 1fr;
+      column-gap: 1em;
+     
+    }
+  
+    addon-card .card-contents{ width: unset !important; white-space: initial !important; }
+  
+    .card-heading-image{ max-width: calc(100% + 32px) }
+    section > h2{ grid-area: hd }
+    addon-card{
+      padding-bottom: 0px !important;
+      padding-top: 0px !important;
+      grid-area: auto;
+    }
+    addon-card .addon-description{ max-height: 3em; scrollbar-width: thin; }
+  }
+
+/*
+button:enabled {  -moz-appearance: none !important; 
+							 background: var(--theme-gradient-purple) !important;
+							 color: var(--theme-text-default) !important;
+							 border: 1px solid var(--theme-outline-selection-box-purple) !important;
+							 box-shadow: 0 0 1px var(--theme-outline-selection-box-shadow-purple) !important;
+							 border-radius: 0.3em !important; }
+
+
+
+button:focus, button:enabled:hover { background: var(--theme-gradient-grey) !important;
+								   color: var(--theme-text-highlight) !important;
+								   border: 1px var(--theme-outline-selection-box-grey) solid !important;
+								   box-shadow: 0 0 1px var(--theme-outline-selection-box-shadow-grey) !important; }
+
+*/
+}
+
+
+
+
+
+
+
+

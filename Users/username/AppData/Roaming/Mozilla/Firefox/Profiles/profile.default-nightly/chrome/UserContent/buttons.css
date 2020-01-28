@@ -1,0 +1,108 @@
+@namespace html "http://www.w3.org/1999/xhtml";
+@namespace xul "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul";
+
+
+
+
+/* ------------------------------------------------------------------------------------------------------------------------------*/
+/* -                                                            BUTTONS                                                         -*/
+/* ------------------------------------------------------------------------------------------------------------------------------*/
+
+@-moz-document url-prefix(chrome://mozapps/content/extensions/) {
+
+/* FIND MORE ADDONS BUTTON */
+button.primary { background: var(--theme-gradient-purple) !important;
+				 color: var(--theme-text-default) !important;
+				 border: 1px solid var(--theme-outline-selection-box-purple) !important;
+				 box-shadow: 0 0 1px var(--theme-outline-selection-box-shadow-purple) !important; border-radius: 0.3em !important; }
+
+button.primary:not([disabled="true"]):hover { background: var(--theme-gradient-grey) !important;
+											  color: var(--theme-text-highlight) !important;
+											  fill: var(--theme-text-highlight) !important;
+											  border: 1px var(--theme-outline-selection-box-grey) solid !important;
+											  box-shadow: 0 0 1px var(--theme-outline-selection-box-shadow-grey) !important; }
+}
+
+
+
+
+@-moz-document url-prefix(about:addons), url-prefix(about:preferences) {
+
+button { background: var(--theme-gradient-purple) !important;
+		 color: var(--theme-text-default) !important;
+		 border: 1px solid var(--theme-outline-selection-box-purple) !important;
+		 box-shadow: 0 0 1px var(--theme-outline-selection-box-shadow-purple) !important;
+		 border-radius: 0.3em !important; }
+				   
+button:not([disabled="true"]):hover { background: var(--theme-gradient-grey) !important;
+									  color: var(--theme-text-highlight) !important;
+									  fill: var(--theme-text-highlight) !important;
+									  border: 1px var(--theme-outline-selection-box-grey) solid !important;
+									  box-shadow: 0 0 1px var(--theme-outline-selection-box-shadow-grey) !important; }
+										
+
+
+* menulist { background: var(--theme-background) !important;
+			 border: 1px var(--theme-outline-selection-box-grey) solid !important;
+			 }
+
+#handlersView > richlistitem > hbox > hbox > menulist { background: var(--theme-gradient-grey) !important;
+														color: var(--theme-text-highlight) !important;
+														}
+
+
+treecol { background: var(--theme-gradient-cards-purple) !important; }
+
+textbox {
+background: var(--theme-background) !important;
+color: var(--theme-text-default) !important;
+border: 1px var(--theme-outline-selection-box-purple) solid !important;
+}
+		 
+}
+
+
+@-moz-document url-prefix("chrome://browser/content/"),
+url-prefix("chrome://pippki/content/"){
+
+button { background: var(--theme-gradient-purple) !important;
+		 color: var(--theme-text-default) !important;
+		 border: 1px solid var(--theme-outline-selection-box-purple) !important;
+		 box-shadow: 0 0 1px var(--theme-outline-selection-box-shadow-purple) !important;
+		 border-radius: 0.3em !important; }
+				   
+button:not([disabled="true"]):hover { background: var(--theme-gradient-grey) !important;
+									  color: var(--theme-text-highlight) !important;
+									  fill: var(--theme-text-highlight) !important;
+									  border: 1px var(--theme-outline-selection-box-grey) solid !important;
+									  box-shadow: 0 0 1px var(--theme-outline-selection-box-shadow-grey) !important; }
+
+
+* .checkbox-icon { background: transparent !important; }
+* .checkbox-check { fill: var(--theme-checkbox-check) !important; }
+*.radio-check { fill: var(--theme-checkbox-check) !important; }
+* menulist { background: var(--theme-background) !important; border: 1px var(--theme-outline-selection-box-grey) solid !important; }
+* .menulist-dropmarker { background: transparent !important; fill: var(--theme-checkbox-check) !important; }
+* menuitem[type="checkbox"] > .menu-iconic-left > .menu-iconic-icon,
+* menuitem[checked="true"] > .menu-iconic-left > .menu-iconic-icon,
+* menuitem[type="radio"] > .menu-iconic-left > .menu-iconic-icon { background: transparent url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 20 20" ><path fill="var(--theme-checkbox-check)" d="M 13.09,2.87 C 13.09,2.87 6.00,11.00 6.00,11.00 6.00,11.00 2.00,9.00 2.00,9.00 4.25,12.81 7.00,14.00 7.00,14.00 9.24,10.42 12.04,7.39 13.09,2.87 Z" /></svg>') no-repeat center center !important; }
+
+
+xul|menulist > xul|menupopup > xul|menu:not([disabled="true"])[selected="true"], xul|menulist > xul|menupopup > xul|menuitem:not([disabled="true"])[selected="true"] { background: var(--theme-gradient-purple) !important; }
+xul|menulist > xul|menupopup > xul|menu:not([disabled="true"])[selected="true"], xul|menulist > xul|menupopup > xul|menuitem:not([disabled="true"]):hover { background: var(--theme-gradient-grey) !important; }
+
+treecol { background: var(--theme-gradient-titlebar) !important; }
+
+textbox { background: var(--theme-background) !important;
+		  color: var(--theme-text-default) !important;
+		  border: 1px var(--theme-outline-selection-box-purple) solid !important;
+		  }
+
+
+}
+
+
+
+
+
+

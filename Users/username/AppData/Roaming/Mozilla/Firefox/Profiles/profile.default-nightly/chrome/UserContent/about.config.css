@@ -1,0 +1,43 @@
+@namespace html "http://www.w3.org/1999/xhtml";
+@namespace xul "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul";
+
+/* ------------------------------------------------------------------------------------------------------------------------------*/
+/* -                                                    ABOOUT:CONFIG                                                           -*/
+/* ------------------------------------------------------------------------------------------------------------------------------*/
+@-moz-document url-prefix(about:config) {
+
+body div.container div.button-container button#warningButton { background: var(--theme-gradient-grey) !important;
+															   color: var(--theme-text-highlight) !important;
+															   border: 1px var(--theme-outline-selection-box-grey) solid !important;
+															   box-shadow: 0 0 1px var(--theme-outline-selection-box-shadow-grey) !important; }
+
+body div.container div.button-container button#warningButton:not([disabled="true"]):hover { background: var(--theme-gradient-purple) !important;
+																							color: var(--theme-text-default) !important;
+																							border: 1px solid var(--theme-outline-selection-box-purple) !important;
+																							box-shadow: 0 0 1px var(--theme-outline-selection-box-shadow-purple) !important; border-radius: 0.3em !important; }
+
+html|input[type="checkbox"]:checked { background-image: url("chrome://global/skin/icons/check.svg") !important;
+									  -moz-context-properties: fill !important;
+									  fill: var(--theme-checkbox-check) !important; }
+
+html|button:enabled:hover,
+html|select:not([size]):not([multiple]):enabled:hover,
+html|input[type="color"]:hover,
+xul|button:not([disabled="true"]):hover,
+xul|menulist:not([disabled="true"]):hover { background-color: var(--theme-background) !important;
+											fill: var(--theme-button-highlight) !important;
+											filter: brightness(125%) !important;
+											border: 2px solid var(--theme-outline-button-purple) !important;
+											box-shadow: 0 0 10px var(--theme-outline-selection-box-shadow-purple) !important;
+											border-radius: 0.5em !important; }
+
+
+#prefs > tr:hover { color: var(--theme-text-highlight) !important;
+					filter: brightness(125%) !important;
+					background: var(--theme-gradient-grey) !important;
+					border: 1.5px solid var(--theme-outline-button-purple) !important;
+					box-shadow: 0 0 1px var(--theme-outline-selection-box-shadow-purple) !important; }
+
+}
+
+

@@ -1,0 +1,9 @@
+/* ------------------------------------------------------------------------------------------------------------------------------*/
+/* -                                                     Titlebar                                                               -*/
+/* ------------------------------------------------------------------------------------------------------------------------------*/
+
+/* titlebar */
+#tabbrowser-tabs, #tabs-newtab-button,#alltabs-button, .titlebar-buttonbox { -moz-appearance: none !important; background-image: var(--theme-titlebar4) !important; }
+
+/* titlebar with menubar open */
+ #main-menubar, :root[tabsintitlebar]:-moz-lwtheme-brighttext #toolbar-menubar .titlebar-buttonbox { background: var(--theme-background) !important; color: var(--theme-text-default) !important; }
